@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="phx-D2-MZS">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Add Detail View Controller-->
+        <scene sceneID="jpa-gP-kZg">
+            <objects>
+                <viewController id="phx-D2-MZS" customClass="AddDetailViewController" customModule="SufferTest" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Vjq-60-JkW">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="366-I5-bPR">
+                                <rect key="frame" x="15" y="318" width="345" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="금액" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Zb-sm-4n0">
+                                <rect key="frame" x="15" y="282" width="29.5" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="세부사항" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sU8-6A-wVK">
+                                <rect key="frame" x="15" y="363" width="59" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ojO-wa-aDL">
+                                <rect key="frame" x="15" y="399" width="345" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3yZ-sb-TBX">
+                                <rect key="frame" x="161" y="537" width="52" height="30"/>
+                                <state key="normal" title="입력하기"/>
+                                <connections>
+                                    <action selector="touUpInsideInputButton:" destination="phx-D2-MZS" eventType="touchUpInside" id="fNP-tv-8y4"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="366-I5-bPR" firstAttribute="leading" secondItem="gyp-Wy-M4I" secondAttribute="leading" constant="15" id="AaS-9F-0CG"/>
+                            <constraint firstItem="3yZ-sb-TBX" firstAttribute="centerX" secondItem="Vjq-60-JkW" secondAttribute="centerX" id="B7M-3B-VsM"/>
+                            <constraint firstItem="sU8-6A-wVK" firstAttribute="leading" secondItem="gyp-Wy-M4I" secondAttribute="leading" constant="15" id="Dyf-6d-hzd"/>
+                            <constraint firstItem="ojO-wa-aDL" firstAttribute="top" secondItem="sU8-6A-wVK" secondAttribute="bottom" constant="15" id="Gve-X7-mDk"/>
+                            <constraint firstItem="1Zb-sm-4n0" firstAttribute="leading" secondItem="gyp-Wy-M4I" secondAttribute="leading" constant="15" id="IMu-HX-XeM"/>
+                            <constraint firstItem="ojO-wa-aDL" firstAttribute="leading" secondItem="gyp-Wy-M4I" secondAttribute="leading" constant="15" id="Jbh-Dt-BZo"/>
+                            <constraint firstItem="366-I5-bPR" firstAttribute="centerX" secondItem="Vjq-60-JkW" secondAttribute="centerX" id="SZy-Ji-dHx"/>
+                            <constraint firstItem="sU8-6A-wVK" firstAttribute="top" secondItem="366-I5-bPR" secondAttribute="bottom" constant="15" id="aXc-oM-enW"/>
+                            <constraint firstItem="366-I5-bPR" firstAttribute="top" secondItem="1Zb-sm-4n0" secondAttribute="bottom" constant="15" id="bo2-a1-PdI"/>
+                            <constraint firstItem="gyp-Wy-M4I" firstAttribute="trailing" secondItem="ojO-wa-aDL" secondAttribute="trailing" constant="15" id="jvm-Ju-xun"/>
+                            <constraint firstItem="gyp-Wy-M4I" firstAttribute="bottom" secondItem="3yZ-sb-TBX" secondAttribute="bottom" constant="100" id="qAx-Os-5Oy"/>
+                            <constraint firstItem="gyp-Wy-M4I" firstAttribute="trailing" secondItem="366-I5-bPR" secondAttribute="trailing" constant="15" id="rzr-2q-Ilh"/>
+                            <constraint firstItem="366-I5-bPR" firstAttribute="centerY" secondItem="Vjq-60-JkW" secondAttribute="centerY" id="ty5-BM-h9h"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="gyp-Wy-M4I"/>
+                    </view>
+                    <connections>
+                        <outlet property="amountTextField" destination="366-I5-bPR" id="Z0Q-mz-Das"/>
+                        <outlet property="titleTextField" destination="ojO-wa-aDL" id="b4O-x1-AeZ"/>
+                        <segue destination="VN7-T1-xDa" kind="unwind" identifier="backToTop" unwindAction="backToTopWithSegue:" id="wLj-YU-bAV"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eSw-rE-5RK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="VN7-T1-xDa" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="9" y="54"/>
+        </scene>
+    </scenes>
+</document>
