@@ -83,7 +83,7 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y3H-ps-3u7">
                                 <rect key="frame" x="0.0" y="235.5" width="375" height="96"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="70"/>
-                                <state key="normal" title="1"/>
+                                <state key="normal" title="+    -"/>
                                 <connections>
                                     <segue destination="j0d-be-Xrt" kind="presentation" id="Wsb-4J-mBV"/>
                                 </connections>
@@ -95,6 +95,14 @@
                                     <segue destination="IfO-Eg-Bkm" kind="show" id="1fb-IN-MaY"/>
                                 </connections>
                             </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mzp-3K-1OH">
+                                <rect key="frame" x="112" y="437" width="150" height="150"/>
+                                <color key="backgroundColor" red="0.99607843139999996" green="0.8980392157" blue="0.87450980389999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="150" id="an6-Ra-qqO"/>
+                                    <constraint firstAttribute="width" constant="150" id="h3j-on-FWi"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -109,11 +117,13 @@
                             <constraint firstItem="BaY-1C-CQj" firstAttribute="centerX" secondItem="5Zp-La-pZI" secondAttribute="centerX" id="Pc3-Ml-iAS"/>
                             <constraint firstItem="Y3H-ps-3u7" firstAttribute="top" secondItem="jgk-ui-Po5" secondAttribute="bottom" constant="10" id="Reb-WO-NFT"/>
                             <constraint firstItem="0R0-gw-hl6" firstAttribute="leading" secondItem="G3n-TY-QMn" secondAttribute="leading" id="bdI-hn-Vf7"/>
+                            <constraint firstItem="mzp-3K-1OH" firstAttribute="centerX" secondItem="5Zp-La-pZI" secondAttribute="centerX" id="czZ-ax-u3g"/>
                             <constraint firstItem="Zo2-W0-CfW" firstAttribute="top" secondItem="ujY-GK-S90" secondAttribute="bottom" constant="10" id="dzJ-Ba-dR2"/>
                             <constraint firstItem="G3n-TY-QMn" firstAttribute="bottom" secondItem="0R0-gw-hl6" secondAttribute="bottom" id="fjV-j4-1q4"/>
                             <constraint firstItem="G3n-TY-QMn" firstAttribute="trailing" secondItem="Y3H-ps-3u7" secondAttribute="trailing" id="gE7-QL-ZwC"/>
                             <constraint firstItem="jgk-ui-Po5" firstAttribute="centerX" secondItem="5Zp-La-pZI" secondAttribute="centerX" id="gtc-UZ-aIp"/>
                             <constraint firstItem="WPG-jT-mNE" firstAttribute="top" secondItem="Zo2-W0-CfW" secondAttribute="bottom" constant="15" id="iT5-Lq-9AW"/>
+                            <constraint firstItem="G3n-TY-QMn" firstAttribute="bottom" secondItem="mzp-3K-1OH" secondAttribute="bottom" constant="80" id="l9a-Od-JGa"/>
                             <constraint firstItem="Zo2-W0-CfW" firstAttribute="leading" secondItem="G3n-TY-QMn" secondAttribute="leading" id="uxU-m0-Ofr"/>
                             <constraint firstItem="ujY-GK-S90" firstAttribute="top" secondItem="G3n-TY-QMn" secondAttribute="top" id="vLJ-4G-vfb"/>
                             <constraint firstItem="G3n-TY-QMn" firstAttribute="trailing" secondItem="0R0-gw-hl6" secondAttribute="trailing" id="wEr-rF-pTc"/>

@@ -48,9 +48,9 @@ class LoginViewController: UIViewController {
     // action
     
     @IBAction func touchUpInsideLoginButton(_ sender: Any) {
-//        let id = self.idTextField.text ?? ""
-//        let pass = self.passwordTextField.text ?? ""
-        AuthFetcher.login(email: "dearkibok@gmail.com", password: "123456", completion: { error in
+        let id = self.idTextField.text ?? ""
+        let pass = self.passwordTextField.text ?? ""
+        AuthFetcher.login(email: id, password: pass, completion: { error in
             if let error = error {
                 // add error handling
                 print(error as NSError)
@@ -68,9 +68,9 @@ class LoginViewController: UIViewController {
     }
     
     @IBAction func touchUpInsideSignupButton(_ sender: Any) {
-//        let id = self.idTextField.text ?? ""
-//        let pass = self.passwordTextField.text ?? ""
-        AuthFetcher.signup(email: "dearkibok@gmail.com", password: "123456", completion: { error in
+        let id = self.idTextField.text ?? ""
+        let pass = self.passwordTextField.text ?? ""
+        AuthFetcher.signup(email: id, password: pass, completion: { error in
             if let error = error {
                 print(error.localizedDescription)
             } else {
