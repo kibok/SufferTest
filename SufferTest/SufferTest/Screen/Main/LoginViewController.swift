@@ -52,7 +52,8 @@ class LoginViewController: UIViewController {
 //        let pass = self.passwordTextField.text ?? ""
         AuthFetcher.login(email: "dearkibok@gmail.com", password: "123456", completion: { error in
             if let error = error {
-                print(error.localizedDescription)
+                // add error handling
+                print(error as NSError)
             } else {
                 print("success login")
                 HistoryFetcher.readProject(completion: { error in

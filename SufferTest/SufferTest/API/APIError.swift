@@ -8,5 +8,9 @@
 
 import Foundation
 
-// error list 작성
+enum AuthError: Swift.Error {
+
+    
+}
+
 

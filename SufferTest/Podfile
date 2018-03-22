@@ -7,8 +7,9 @@ target 'SufferTest' do
 
   # Pods for SufferTest
   pod 'FoldingCell'
+  pod 'lottie-ios'
   pod 'Firebase/Auth'
   pod 'Firebase/Core'
-  pod 'Firebase/Firestore'  
+  pod 'Firebase/Firestore'
   
 end

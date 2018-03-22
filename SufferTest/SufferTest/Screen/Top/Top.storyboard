@@ -92,7 +92,7 @@
                                 <rect key="frame" x="0.0" y="149" width="50" height="30"/>
                                 <state key="normal" title="History"/>
                                 <connections>
-                                    <segue destination="IfO-Eg-Bkm" kind="presentation" id="1fb-IN-MaY"/>
+                                    <segue destination="IfO-Eg-Bkm" kind="show" id="1fb-IN-MaY"/>
                                 </connections>
                             </button>
                         </subviews>
