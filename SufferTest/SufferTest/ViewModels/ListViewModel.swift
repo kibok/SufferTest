@@ -8,22 +8,4 @@
 
 import UIKit
 
-struct ListViewModel {
- 
-    let projects: [Project]
-    
-    init(projects: [Project]) {
-        self.projects = projects
-    }
-    
-}
 
-struct DetailsViewModel {
-    
-    let details: [Detail]
-    
-    init(details: [Detail]) {
-        self.details = details
-    }
-    
-}

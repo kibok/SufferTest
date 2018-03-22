@@ -17,7 +17,7 @@ struct ProjectAPI {
         guard let project = DataManager.shared.ongoingProject else {
             return nil
         }
-        let details: [Parameters] = project.details.flatMap { [ "title": $0.title, "amount": $0.amount ] }
+        let details: [Parameters] = project.details.flatMap { [ "inputDate": $0.inputDate, "title": $0.title, "amount": $0.amount ] }
         return [
             "projectState": project.projectState.rawValue,
             "startDate": project.startDate,
@@ -30,7 +30,7 @@ struct ProjectAPI {
     
     static func makeHistoryParameters() -> [Parameters] {
         return DataManager.shared.projectHistory.map { project in
-            let details: [Parameters] = project.details.flatMap { [ "title": $0.title, "amount": $0.amount ] }
+            let details: [Parameters] = project.details.flatMap { [ "inputDate": $0.inputDate, "title": $0.title, "amount": $0.amount ] }
             return [
                 "projectState": project.projectState.rawValue,
                 "startDate": project.startDate,

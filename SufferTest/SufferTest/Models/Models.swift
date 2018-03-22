@@ -15,15 +15,18 @@ import Firebase
 /// - amount: 금액(+,-)
 struct Detail {
     
+    let inputDate: Date
     let title: String
     let amount: Int
     
     init(_ json: JSON) {
+        self.inputDate = json["inputDate"] as! Date
         self.title = json["title"] as! String
         self.amount = json["amount"] as! Int
     }
     
-    init(title: String, amount: Int) {
+    init(inputDate: Date, title: String, amount: Int) {
+        self.inputDate = inputDate
         self.title = title
         self.amount = amount
     }

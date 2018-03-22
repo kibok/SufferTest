@@ -19,7 +19,7 @@ class AddDetailViewController: UIViewController {
 
     @IBAction func touUpInsideInputButton(_ sender: Any) {
         let amount = Int(self.amountTextField.text ?? "0")
-        DataManager.addDetail(detail: Detail(title: self.titleTextField.text ?? "", amount: amount!))
+        DataManager.addDetail(detail: Detail(inputDate: Date(), title: self.titleTextField.text ?? "", amount: amount!))
         HistoryFetcher.updateProject(data: ProjectAPI.makeProjectParameters()!)
         
         self.performSegue(withIdentifier: "backToTop", sender: nil)

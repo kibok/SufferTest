@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2120AA73206338F300B9C587 /* HistoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2120AA72206338F300B9C587 /* HistoryTableViewCell.swift */; };
+		2120AA752063392600B9C587 /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2120AA742063392600B9C587 /* HistoryViewController.swift */; };
+		2120AA7720633B4500B9C587 /* List.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2120AA7620633B4500B9C587 /* List.storyboard */; };
+		2120AA7F20633FAE00B9C587 /* SufferTestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2120AA7E20633FAE00B9C587 /* SufferTestTests.swift */; };
+		2120AA872063403700B9C587 /* APITest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2120AA862063403700B9C587 /* APITest.swift */; };
 		215A9A16205F4EB300512508 /* FoundationExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 215A9A15205F4EB300512508 /* FoundationExtensions.swift */; };
 		215A9A19205F653900512508 /* AddDetail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 215A9A18205F653900512508 /* AddDetail.storyboard */; };
 		215A9A1B205F655600512508 /* AddDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 215A9A1A205F655600512508 /* AddDetailViewController.swift */; };
@@ -36,8 +41,25 @@
 		C4E7C1B320569FE40003736F /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4E7C1B220569FE40003736F /* LoginViewController.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		2120AA8120633FAE00B9C587 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 21C1055B2050D078006E81B5 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 21C105622050D078006E81B5;
+			remoteInfo = SufferTest;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
 		1F3F56D78DD5D08CFAA18C13 /* Pods-SufferTest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SufferTest.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SufferTest/Pods-SufferTest.debug.xcconfig"; sourceTree = "<group>"; };
+		2120AA72206338F300B9C587 /* HistoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryTableViewCell.swift; sourceTree = "<group>"; };
+		2120AA742063392600B9C587 /* HistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryViewController.swift; sourceTree = "<group>"; };
+		2120AA7620633B4500B9C587 /* List.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = List.storyboard; sourceTree = "<group>"; };
+		2120AA7C20633FAE00B9C587 /* SufferTestTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SufferTestTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		2120AA7E20633FAE00B9C587 /* SufferTestTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SufferTestTests.swift; sourceTree = "<group>"; };
+		2120AA8020633FAE00B9C587 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2120AA862063403700B9C587 /* APITest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APITest.swift; sourceTree = "<group>"; };
 		215A9A15205F4EB300512508 /* FoundationExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoundationExtensions.swift; sourceTree = "<group>"; };
 		215A9A18205F653900512508 /* AddDetail.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AddDetail.storyboard; sourceTree = "<group>"; };
 		215A9A1A205F655600512508 /* AddDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddDetailViewController.swift; sourceTree = "<group>"; };
@@ -71,6 +93,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		2120AA7920633FAE00B9C587 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		21C105602050D078006E81B5 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -82,6 +111,34 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2120AA702063389F00B9C587 /* History */ = {
+			isa = PBXGroup;
+			children = (
+				2120AA71206338CE00B9C587 /* Cell */,
+				C46ABC0420542DCA001D86F5 /* History.storyboard */,
+				2120AA742063392600B9C587 /* HistoryViewController.swift */,
+			);
+			path = History;
+			sourceTree = "<group>";
+		};
+		2120AA71206338CE00B9C587 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				2120AA72206338F300B9C587 /* HistoryTableViewCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		2120AA7D20633FAE00B9C587 /* SufferTestTests */ = {
+			isa = PBXGroup;
+			children = (
+				2120AA7E20633FAE00B9C587 /* SufferTestTests.swift */,
+				2120AA862063403700B9C587 /* APITest.swift */,
+				2120AA8020633FAE00B9C587 /* Info.plist */,
+			);
+			path = SufferTestTests;
+			sourceTree = "<group>";
+		};
 		215A9A14205F4E9400512508 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
@@ -103,7 +160,7 @@
 			isa = PBXGroup;
 			children = (
 				C4173C3A20542513007A3F62 /* Cell */,
-				C46ABC0420542DCA001D86F5 /* History.storyboard */,
+				2120AA7620633B4500B9C587 /* List.storyboard */,
 				2182874A2050E0200034A855 /* ListViewController.swift */,
 			);
 			path = List;
@@ -122,6 +179,7 @@
 			isa = PBXGroup;
 			children = (
 				21C105652050D078006E81B5 /* SufferTest */,
+				2120AA7D20633FAE00B9C587 /* SufferTestTests */,
 				21C105642050D078006E81B5 /* Products */,
 				FBB81A0ECD5367CC2046B75D /* Pods */,
 				E726AB484FDBB2A38CBA4309 /* Frameworks */,
@@ -132,6 +190,7 @@
 			isa = PBXGroup;
 			children = (
 				21C105632050D078006E81B5 /* SufferTest.app */,
+				2120AA7C20633FAE00B9C587 /* SufferTestTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -241,6 +300,7 @@
 				21828753205111AF0034A855 /* Top */,
 				215A9A17205F64EF00512508 /* AddDetail */,
 				2182874E2050E1A60034A855 /* List */,
+				2120AA702063389F00B9C587 /* History */,
 				C4FEE2B3205AAE970033EC19 /* Setting */,
 			);
 			path = Screen;
@@ -266,6 +326,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		2120AA7B20633FAE00B9C587 /* SufferTestTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2120AA8320633FAE00B9C587 /* Build configuration list for PBXNativeTarget "SufferTestTests" */;
+			buildPhases = (
+				2120AA7820633FAE00B9C587 /* Sources */,
+				2120AA7920633FAE00B9C587 /* Frameworks */,
+				2120AA7A20633FAE00B9C587 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2120AA8220633FAE00B9C587 /* PBXTargetDependency */,
+			);
+			name = SufferTestTests;
+			productName = SufferTestTests;
+			productReference = 2120AA7C20633FAE00B9C587 /* SufferTestTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		21C105622050D078006E81B5 /* SufferTest */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 21C105752050D078006E81B5 /* Build configuration list for PBXNativeTarget "SufferTest" */;
@@ -296,6 +374,11 @@
 				LastUpgradeCheck = 0920;
 				ORGANIZATIONNAME = "Fenrir Inc.";
 				TargetAttributes = {
+					2120AA7B20633FAE00B9C587 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 21C105622050D078006E81B5;
+					};
 					21C105622050D078006E81B5 = {
 						CreatedOnToolsVersion = 9.2;
 						ProvisioningStyle = Automatic;
@@ -316,17 +399,26 @@
 			projectRoot = "";
 			targets = (
 				21C105622050D078006E81B5 /* SufferTest */,
+				2120AA7B20633FAE00B9C587 /* SufferTestTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		2120AA7A20633FAE00B9C587 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		21C105612050D078006E81B5 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				C4173C3C2054285A007A3F62 /* Top.storyboard in Resources */,
 				C4680E872056A48A00684033 /* GoogleService-Info.plist in Resources */,
+				2120AA7720633B4500B9C587 /* List.storyboard in Resources */,
 				21C105712050D078006E81B5 /* LaunchScreen.storyboard in Resources */,
 				C4173C3E2054297D007A3F62 /* Setting.storyboard in Resources */,
 				C4E2CB6F205D436800894CA5 /* FirstSetting.storyboard in Resources */,
@@ -414,10 +506,20 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		2120AA7820633FAE00B9C587 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2120AA872063403700B9C587 /* APITest.swift in Sources */,
+				2120AA7F20633FAE00B9C587 /* SufferTestTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		21C1055F2050D078006E81B5 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2120AA73206338F300B9C587 /* HistoryTableViewCell.swift in Sources */,
 				C473ABAE205A8F7E004609E4 /* Models.swift in Sources */,
 				2182875220510C510034A855 /* TopViewController.swift in Sources */,
 				C4E7C1B120569ECC0003736F /* AutoRootController.swift in Sources */,
@@ -433,12 +535,21 @@
 				C473ABA9205A8F31004609E4 /* API.swift in Sources */,
 				2182874B2050E0200034A855 /* ListViewController.swift in Sources */,
 				C4E2CB71205D442B00894CA5 /* InputFirstSettingViewController.swift in Sources */,
+				2120AA752063392600B9C587 /* HistoryViewController.swift in Sources */,
 				C473ABB0205A8F95004609E4 /* DataManager.swift in Sources */,
 				217A60A1205B63A0008AEA8B /* APIError.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		2120AA8220633FAE00B9C587 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 21C105622050D078006E81B5 /* SufferTest */;
+			targetProxy = 2120AA8120633FAE00B9C587 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		21C1056A2050D078006E81B5 /* Main.storyboard */ = {
@@ -460,6 +571,38 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		2120AA8420633FAE00B9C587 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
+				INFOPLIST_FILE = SufferTestTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.fenrir-inc.SufferTestTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SufferTest.app/SufferTest";
+			};
+			name = Debug;
+		};
+		2120AA8520633FAE00B9C587 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
+				INFOPLIST_FILE = SufferTestTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.fenrir-inc.SufferTestTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SufferTest.app/SufferTest";
+			};
+			name = Release;
+		};
 		21C105732050D078006E81B5 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -606,6 +749,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		2120AA8320633FAE00B9C587 /* Build configuration list for PBXNativeTarget "SufferTestTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2120AA8420633FAE00B9C587 /* Debug */,
+				2120AA8520633FAE00B9C587 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		21C1055E2050D078006E81B5 /* Build configuration list for PBXProject "SufferTest" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
