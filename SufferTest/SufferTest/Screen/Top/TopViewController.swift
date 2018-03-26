@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import GoogleMobileAds
 
 protocol TopViewControllerDelegate{
     func didFinishLogout()
@@ -20,10 +21,17 @@ class TopViewController: UIViewController {
     var viewModel: TopViewModel!
     var delegate: TopViewControllerDelegate?
     
+    @IBOutlet weak var bannerView: GADBannerView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         self.updateViews()
+        
+//        bannerView.adUnitID = "ca-app-pub-1881939689743902/1144068972"
+        bannerView.adUnitID = "ca-app-pub-3940256099942544/2934735716"
+        bannerView.rootViewController = self
+        bannerView.load(GADRequest())
     }
     
     func updateViews() {
@@ -58,6 +66,6 @@ class TopViewController: UIViewController {
     
     @IBAction func touchUpInsideHistoryButton(_ sender: Any) {
     
-    }    
+    }
     
 }

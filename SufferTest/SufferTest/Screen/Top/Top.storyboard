@@ -54,7 +54,7 @@
                                 <rect key="frame" x="0.0" y="104" width="39" height="30"/>
                                 <state key="normal" title="Reset"/>
                             </button>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0R0-gw-hl6">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0R0-gw-hl6" customClass="GADBannerView">
                                 <rect key="frame" x="0.0" y="567" width="375" height="100"/>
                                 <color key="backgroundColor" red="0.7414550781" green="0.76923285590000001" blue="0.83010525170000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
@@ -123,6 +123,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="GGb-1W-D3c"/>
                     <connections>
+                        <outlet property="bannerView" destination="0R0-gw-hl6" id="CBl-pL-99G"/>
                         <outlet property="dateLabel" destination="jgk-ui-Po5" id="uZE-Bs-x0c"/>
                         <outlet property="resultAmountLabel" destination="BaY-1C-CQj" id="fua-YF-X29"/>
                     </connections>
