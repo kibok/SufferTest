@@ -55,7 +55,7 @@
                     <navigationItem key="navigationItem" id="tUf-NL-0ex"/>
                     <connections>
                         <outlet property="amountTextField" destination="q4z-wW-Fxr" id="aGO-E9-Nrs"/>
-                        <outlet property="endDateTextField" destination="SAo-7h-EnD" id="xXN-EJ-Z5M"/>
+                        <outlet property="periodTextField" destination="SAo-7h-EnD" id="Jzh-hL-URw"/>
                         <segue destination="6cc-HC-rvJ" kind="show" identifier="toConfirmation" id="mQO-Pw-R42"/>
                     </connections>
                 </viewController>

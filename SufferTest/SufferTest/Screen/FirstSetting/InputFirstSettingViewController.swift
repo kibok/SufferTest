@@ -10,7 +10,7 @@ import UIKit
 
 class InputFirstSettingViewController: UIViewController {
 
-    @IBOutlet weak var endDateTextField: UITextField!
+    @IBOutlet weak var periodTextField: UITextField!
     @IBOutlet weak var amountTextField: UITextField!
     
     // MARK: - LifeCycles
@@ -23,35 +23,66 @@ class InputFirstSettingViewController: UIViewController {
     // MARK: - Actions
     
     @IBAction func touchUpInsiteNextButton(_ sender: Any) {
+        let alertTilte = "입력실패"
+        if let invalideDate = self.periodValidationChecker() {
+            self.showAlert(title: alertTilte, message: invalideDate)
+            return
+        }
+        
+        if let invalidAmount = self.amountValidationChecker() {
+            self.showAlert(title: alertTilte, message: invalidAmount)
+            return
+        }
+        
         self.performSegue(withIdentifier: "toConfirmation", sender: nil)
     }
     
     // MARK: - Navigation
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "toConfirmation", let vc = segue.destination as? ConfirmationFirstSettingViewController {
-            let period = Int(self.endDateTextField.text ?? "0")
-            let endDate = Calendar.current.date(byAdding: .day, value: period!, to: Date())
-            let amount = Int(self.amountTextField.text ?? "0")
-            vc.viewModel = ConfirmationFirstSettingViewModel(endDate: endDate!, amount: amount!)
+        if segue.identifier == "toConfirmation", let vc = segue.destination as? ConfirmationFirstSettingViewController,
+            let period = self.periodTextField.text?.int,
+            let amount = self.amountTextField.text?.int,
+            let endDate = Calendar.current.date(byAdding: .day, value: period, to: Date()) {
+            vc.viewModel = ConfirmationFirstSettingViewModel(endDate: endDate, amount: amount)
         }
     }
     
     // MARK: - Private methods
     
-    private func validattionCheck() -> Bool {
-        // 1. 형식
-        // 2. 글자수
+    // Validation Rule
+    // 날짜: 설정가능 날짜는 1~31, 기본값은 그 달의 날짜수
+    // 금액: 0 이상
+
+    private func periodValidationChecker() -> String? {
+        guard let text = self.periodTextField.text else {
+            return "실패"
+        }
         
+        if text == "" {
+            return "기간을 입력해주세요"
+        }
         
+        if let int = text.int, int <= 0 || int > 31 {
+            return "올바른 기간을 입력해주세요"
+        }
         
-        return true
+        return nil
     }
     
-    private func dateChecker() -> Bool {
+    private func amountValidationChecker() -> String? {
+        guard let text = self.amountTextField.text else {
+            return "실패"
+        }
         
-        return true
+        if text == "" {
+            return "금액을 입력해주세요"
+        }
+        
+        if let int = text.int, int <= 0 {
+            return "올바른 금액을 입력해주세요"
+        }
+        return nil
     }
-    
     
 }

@@ -29,3 +29,11 @@ extension Date {
     }
     
 }
+
+extension String {
+    
+    var int: Int? {
+        return Int(self)
+    }
+    
+}
