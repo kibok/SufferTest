@@ -44,7 +44,7 @@ struct AuthFetcher {
     }
     
     // 로그아웃
-    static func logout(email: String, password: String, completion:@escaping (_ error: Error?) -> ()) {
+    static func logout(completion:@escaping (_ error: Error?) -> ()) {
         do {
             try Auth.auth().signOut()
         } catch {
@@ -91,13 +91,9 @@ struct AuthFetcher {
 struct HistoryFetcher {
     
     // 프로젝트 시작
-    static func startProject(data: JSON) {
+    static func startProject(data: JSON, completion:@escaping (_ error: Error?) -> ()) {
         FirebaseManager.shared.db.collection("users").document((Auth.auth().currentUser?.email)!).setData(data) { error in
-            if let error = error {
-                print("Error writing document: \(error)")
-            } else {
-                print("Document successfully written!")
-            }
+            completion(error)
         }
     }
     
@@ -126,52 +122,36 @@ struct HistoryFetcher {
     }
     
     // 업데이트 프로젝트
-    static func updateProject(data: JSON) {
+    static func updateProject(data: JSON, completion:@escaping (_ error: Error?) -> ()) {
         FirebaseManager.shared.db.collection("users").document((Auth.auth().currentUser?.email)!).updateData([
             "ongoingProject": data
         ]) { error in
-            if let error = error {
-                print("Error writing document: \(error)")
-            } else {
-                print("Document successfully written!")
-            }
+            completion(error)
         }
     }
     
     // 프로젝트 삭제
-    static func deleteProject() {
+    static func deleteProject(completion:@escaping (_ error: Error?) -> ()) {
         FirebaseManager.shared.db.collection("users").document((Auth.auth().currentUser?.email)!).updateData([
-            "ongoingProject": NSNull(),
-            ]) { error in
-                if let error = error {
-                    print("Error updating document: \(error)")
-                } else {
-                    print("Document successfully updated")
-                }
+            "ongoingProject": NSNull()
+        ]) { error in
+            completion(error)
         }
     }
     
     // 업데이트 히스토리
-    static func updateHistory(data: [JSON]) {
+    static func updateHistory(data: [JSON], completion:@escaping (_ error: Error?) -> ()) {
         FirebaseManager.shared.db.collection("users").document((Auth.auth().currentUser?.email)!).updateData([
             "projectHistory": data
         ]) { error in
-            if let error = error {
-                print("Error writing document: \(error)")
-            } else {
-                print("Document successfully written!")
-            }
+            completion(error)
         }
     }
     
     // 이력초기화
-    static func deleteData() {
+    static func deleteData(completion:@escaping (_ error: Error?) -> ()) {
         FirebaseManager.shared.db.collection("users").document((Auth.auth().currentUser?.email)!).delete() { error in
-            if let error = error {
-                print("Error removing document: \(error)")
-            } else {
-                print("Document successfully removed!")
-            }
+            completion(error)
         }
     }
     

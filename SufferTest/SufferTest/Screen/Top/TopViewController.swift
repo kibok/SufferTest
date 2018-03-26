@@ -50,8 +50,10 @@ class TopViewController: UIViewController {
     // MARK: - Actions
     
     @IBAction func touchUpInsideLogoutButton(_ sender: Any) {
-        DataManager.clear()
-        self.delegate?.didFinishLogout()
+        AuthFetcher.logout(completion: {_ in
+            DataManager.clear()
+            self.delegate?.didFinishLogout()
+        })
     }
     
     @IBAction func touchUpInsideHistoryButton(_ sender: Any) {

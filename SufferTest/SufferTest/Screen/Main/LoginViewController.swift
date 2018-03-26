@@ -13,7 +13,7 @@ protocol LoginViewControllerDelegate{
     func didFinishLogin()
 }
 
-class LoginViewController: UIViewController {
+class LoginViewController: UIViewController, AuthErrorHandling, FirestoreErrorHandling {
 
     @IBOutlet var idTextField: UITextField!
     @IBOutlet var passwordTextField: UITextField!
@@ -52,15 +52,18 @@ class LoginViewController: UIViewController {
         let pass = self.passwordTextField.text ?? ""
         AuthFetcher.login(email: id, password: pass, completion: { error in
             if let error = error {
-                // add error handling
-                print(error as NSError)
+                self.handleAuthError(error)
             } else {
                 print("success login")
                 HistoryFetcher.readProject(completion: { error in
-                    if DataManager.shared.ongoingProject == nil {
-                        self.performSegue(withIdentifier: "toFirstSetting", sender: nil)
+                    if let error = error {
+                        self.handleFirestoreError(error)
                     } else {
-                        self.delegate?.didFinishLogin()
+                        if DataManager.shared.ongoingProject == nil {
+                            self.performSegue(withIdentifier: "toFirstSetting", sender: nil)
+                        } else {
+                            self.delegate?.didFinishLogin()
+                        }
                     }
                 })
             }
@@ -72,7 +75,7 @@ class LoginViewController: UIViewController {
         let pass = self.passwordTextField.text ?? ""
         AuthFetcher.signup(email: id, password: pass, completion: { error in
             if let error = error {
-                print(error.localizedDescription)
+                self.handleAuthError(error)
             } else {
                 print("success signup")
             }

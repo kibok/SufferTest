@@ -26,6 +26,7 @@
 		21C1056C2050D078006E81B5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 21C1056A2050D078006E81B5 /* Main.storyboard */; };
 		21C1056E2050D078006E81B5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 21C1056D2050D078006E81B5 /* Assets.xcassets */; };
 		21C105712050D078006E81B5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 21C1056F2050D078006E81B5 /* LaunchScreen.storyboard */; };
+		21FE4F8420688551003E07C3 /* AlertExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21FE4F8320688551003E07C3 /* AlertExtension.swift */; };
 		26307BE515BD8DB38BB7AF3E /* Pods_SufferTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A514FBDBEB0A2340FA771EB1 /* Pods_SufferTest.framework */; };
 		C4173C3C2054285A007A3F62 /* Top.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C4173C3B2054285A007A3F62 /* Top.storyboard */; };
 		C4173C3E2054297D007A3F62 /* Setting.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C4173C3D2054297D007A3F62 /* Setting.storyboard */; };
@@ -78,6 +79,7 @@
 		21C105702050D078006E81B5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		21C105722050D078006E81B5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		21C42C0FB0C013F0348C5FD2 /* Pods-SufferTest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SufferTest.release.xcconfig"; path = "Pods/Target Support Files/Pods-SufferTest/Pods-SufferTest.release.xcconfig"; sourceTree = "<group>"; };
+		21FE4F8320688551003E07C3 /* AlertExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertExtension.swift; sourceTree = "<group>"; };
 		A514FBDBEB0A2340FA771EB1 /* Pods_SufferTest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SufferTest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C4173C3B2054285A007A3F62 /* Top.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Top.storyboard; sourceTree = "<group>"; };
 		C4173C3D2054297D007A3F62 /* Setting.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Setting.storyboard; sourceTree = "<group>"; };
@@ -152,6 +154,7 @@
 		215A9A14205F4E9400512508 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				21FE4F8320688551003E07C3 /* AlertExtension.swift */,
 				215A9A15205F4EB300512508 /* FoundationExtensions.swift */,
 			);
 			path = Extensions;
@@ -545,6 +548,7 @@
 				C4E2CB73205D445C00894CA5 /* ConfirmationFirstSettingViewController.swift in Sources */,
 				21828755205111CD0034A855 /* TopViewModel.swift in Sources */,
 				215A9A16205F4EB300512508 /* FoundationExtensions.swift in Sources */,
+				21FE4F8420688551003E07C3 /* AlertExtension.swift in Sources */,
 				21C105672050D078006E81B5 /* AppDelegate.swift in Sources */,
 				C473ABA9205A8F31004609E4 /* API.swift in Sources */,
 				2182874B2050E0200034A855 /* ListViewController.swift in Sources */,

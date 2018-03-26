@@ -13,7 +13,7 @@ struct ConfirmationFirstSettingViewModel {
     let amount: Int
 }
 
-class ConfirmationFirstSettingViewController: UIViewController {
+class ConfirmationFirstSettingViewController: UIViewController, FirestoreErrorHandling {
     
     @IBOutlet weak var periodLabel: UILabel!
     @IBOutlet weak var amountLabel: UILabel!
@@ -29,8 +29,13 @@ class ConfirmationFirstSettingViewController: UIViewController {
     
     @IBAction func touchUpInsideCompleteButton(_ sender: Any) {
         DataManager.updateongoing(project: Project(state: .ongoing, endDate: viewModel.endDate, startAmout: viewModel.amount))
-        HistoryFetcher.startProject(data: ProjectAPI.makeUserHistoryParameters())
-        self.performSegue(withIdentifier: "backToLogin", sender: nil)
+        HistoryFetcher.startProject(data: ProjectAPI.makeUserHistoryParameters(), completion: { error in
+            if let error = error {
+                self.handleFirestoreError(error)
+            } else {
+                self.performSegue(withIdentifier: "backToLogin", sender: nil)
+            }
+        })
     }
 
 }

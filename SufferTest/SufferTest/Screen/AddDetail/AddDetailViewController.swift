@@ -8,7 +8,7 @@
 
 import UIKit
 
-class AddDetailViewController: UIViewController {
+class AddDetailViewController: UIViewController, FirestoreErrorHandling {
     
     @IBOutlet weak var titleTextField: UITextField!
     @IBOutlet weak var amountTextField: UITextField!
@@ -18,11 +18,14 @@ class AddDetailViewController: UIViewController {
     }
 
     @IBAction func touUpInsideInputButton(_ sender: Any) {
-        let amount = Int(self.amountTextField.text ?? "0")
-        DataManager.addDetail(detail: Detail(inputDate: Date(), title: self.titleTextField.text ?? "", amount: amount!))
-        HistoryFetcher.updateProject(data: ProjectAPI.makeProjectParameters()!)
-        
-        self.performSegue(withIdentifier: "backToTop", sender: nil)
+        DataManager.addDetail(detail: Detail(inputDate: Date(), title: self.titleTextField.text ?? "", amount: Int(self.amountTextField.text ?? "") ?? 0))
+        HistoryFetcher.updateProject(data: ProjectAPI.makeProjectParameters()!, completion: { error in
+            if let error = error {
+                self.handleFirestoreError(error)
+            } else {
+                self.performSegue(withIdentifier: "backToTop", sender: nil)
+            }
+        })
     }
     
     func validattionCheck() {
