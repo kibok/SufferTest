@@ -15,6 +15,7 @@ class AddDetailViewController: UIViewController, FirestoreErrorHandling {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.hideKeyboard()
     }
 
     @IBAction func touUpInsideInputButton(_ sender: Any) {

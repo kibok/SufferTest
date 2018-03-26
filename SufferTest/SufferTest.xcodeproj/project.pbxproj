@@ -27,6 +27,7 @@
 		21C1056E2050D078006E81B5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 21C1056D2050D078006E81B5 /* Assets.xcassets */; };
 		21C105712050D078006E81B5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 21C1056F2050D078006E81B5 /* LaunchScreen.storyboard */; };
 		21FE4F8420688551003E07C3 /* AlertExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21FE4F8320688551003E07C3 /* AlertExtension.swift */; };
+		21FE4F862068BF65003E07C3 /* UIKitExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21FE4F852068BF64003E07C3 /* UIKitExtensions.swift */; };
 		26307BE515BD8DB38BB7AF3E /* Pods_SufferTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A514FBDBEB0A2340FA771EB1 /* Pods_SufferTest.framework */; };
 		C4173C3C2054285A007A3F62 /* Top.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C4173C3B2054285A007A3F62 /* Top.storyboard */; };
 		C4173C3E2054297D007A3F62 /* Setting.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C4173C3D2054297D007A3F62 /* Setting.storyboard */; };
@@ -80,6 +81,7 @@
 		21C105722050D078006E81B5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		21C42C0FB0C013F0348C5FD2 /* Pods-SufferTest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SufferTest.release.xcconfig"; path = "Pods/Target Support Files/Pods-SufferTest/Pods-SufferTest.release.xcconfig"; sourceTree = "<group>"; };
 		21FE4F8320688551003E07C3 /* AlertExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertExtension.swift; sourceTree = "<group>"; };
+		21FE4F852068BF64003E07C3 /* UIKitExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIKitExtensions.swift; sourceTree = "<group>"; };
 		A514FBDBEB0A2340FA771EB1 /* Pods_SufferTest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SufferTest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C4173C3B2054285A007A3F62 /* Top.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Top.storyboard; sourceTree = "<group>"; };
 		C4173C3D2054297D007A3F62 /* Setting.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Setting.storyboard; sourceTree = "<group>"; };
@@ -156,6 +158,7 @@
 			children = (
 				21FE4F8320688551003E07C3 /* AlertExtension.swift */,
 				215A9A15205F4EB300512508 /* FoundationExtensions.swift */,
+				21FE4F852068BF64003E07C3 /* UIKitExtensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -555,6 +558,7 @@
 				C4E2CB71205D442B00894CA5 /* InputFirstSettingViewController.swift in Sources */,
 				2120AA752063392600B9C587 /* HistoryViewController.swift in Sources */,
 				C473ABB0205A8F95004609E4 /* DataManager.swift in Sources */,
+				21FE4F862068BF65003E07C3 /* UIKitExtensions.swift in Sources */,
 				217A60A1205B63A0008AEA8B /* APIError.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

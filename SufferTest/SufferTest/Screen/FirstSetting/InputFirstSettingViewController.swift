@@ -17,7 +17,7 @@ class InputFirstSettingViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        self.hideKeyboard()
     }
     
     // MARK: - Actions
@@ -38,11 +38,20 @@ class InputFirstSettingViewController: UIViewController {
     }
     
     // MARK: - Private methods
-
-    private func validattionCheck() {
-        // varidation 내용
+    
+    private func validattionCheck() -> Bool {
         // 1. 형식
         // 2. 글자수
+        
+        
+        
+        return true
     }
+    
+    private func dateChecker() -> Bool {
+        
+        return true
+    }
+    
     
 }

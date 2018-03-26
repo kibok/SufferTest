@@ -23,6 +23,7 @@ class LoginViewController: UIViewController, AuthErrorHandling, FirestoreErrorHa
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.hideKeyboard()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -50,7 +51,7 @@ class LoginViewController: UIViewController, AuthErrorHandling, FirestoreErrorHa
     @IBAction func touchUpInsideLoginButton(_ sender: Any) {
         let id = self.idTextField.text ?? ""
         let pass = self.passwordTextField.text ?? ""
-        AuthFetcher.login(email: id, password: pass, completion: { error in
+        AuthFetcher.login(email: "dearkibok@gmail.com", password: "0000001", completion: { error in
             if let error = error {
                 self.handleAuthError(error)
             } else {
