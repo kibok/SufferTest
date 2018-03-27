@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		210256A8206A1AB600B6433E /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 210256A7206A1AB600B6433E /* SettingViewController.swift */; };
 		2120AA73206338F300B9C587 /* HistoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2120AA72206338F300B9C587 /* HistoryTableViewCell.swift */; };
 		2120AA752063392600B9C587 /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2120AA742063392600B9C587 /* HistoryViewController.swift */; };
 		2120AA7720633B4500B9C587 /* List.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2120AA7620633B4500B9C587 /* List.storyboard */; };
@@ -56,6 +57,7 @@
 
 /* Begin PBXFileReference section */
 		1F3F56D78DD5D08CFAA18C13 /* Pods-SufferTest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SufferTest.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SufferTest/Pods-SufferTest.debug.xcconfig"; sourceTree = "<group>"; };
+		210256A7206A1AB600B6433E /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
 		2120AA72206338F300B9C587 /* HistoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryTableViewCell.swift; sourceTree = "<group>"; };
 		2120AA742063392600B9C587 /* HistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryViewController.swift; sourceTree = "<group>"; };
 		2120AA7620633B4500B9C587 /* List.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = List.storyboard; sourceTree = "<group>"; };
@@ -305,6 +307,7 @@
 			isa = PBXGroup;
 			children = (
 				C4173C3D2054297D007A3F62 /* Setting.storyboard */,
+				210256A7206A1AB600B6433E /* SettingViewController.swift */,
 			);
 			path = Setting;
 			sourceTree = "<group>";
@@ -558,6 +561,7 @@
 				C473ABA9205A8F31004609E4 /* API.swift in Sources */,
 				2182874B2050E0200034A855 /* ListViewController.swift in Sources */,
 				C4E2CB71205D442B00894CA5 /* InputFirstSettingViewController.swift in Sources */,
+				210256A8206A1AB600B6433E /* SettingViewController.swift in Sources */,
 				2120AA752063392600B9C587 /* HistoryViewController.swift in Sources */,
 				C473ABB0205A8F95004609E4 /* DataManager.swift in Sources */,
 				21FE4F862068BF65003E07C3 /* UIKitExtensions.swift in Sources */,

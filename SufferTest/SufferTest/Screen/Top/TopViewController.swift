@@ -14,7 +14,7 @@ protocol TopViewControllerDelegate{
     func didFinishLogout()
 }
 
-class TopViewController: UIViewController {
+class TopViewController: UIViewController, AuthErrorHandling {
     
     @IBOutlet var resultAmountLabel: UILabel!
     @IBOutlet var dateLabel: UILabel!
@@ -65,10 +65,13 @@ class TopViewController: UIViewController {
     // MARK: - Private methods
     
     private func requestLogout() {
-        // TODO: fix bug
-        self.delegate?.didFinishLogout()
-        AuthFetcher.logout(completion: {_ in
-            DataManager.clear()
+        AuthFetcher.logout(completion: { error in
+            if let error = error {
+                self.handleAuthError(error)
+            } else {
+                DataManager.clear()
+                self.delegate?.didFinishLogout()
+            }
         })
     }
     

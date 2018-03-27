@@ -47,6 +47,7 @@ struct AuthFetcher {
     static func logout(completion:@escaping (_ error: Error?) -> ()) {
         do {
             try Auth.auth().signOut()
+            completion(nil)
         } catch {
             completion(error)
         }
