@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "1FEE865CA930CAF6325DA8F3ABEEFA0B"
-               BuildableName = "Pods_SufferTest.framework"
-               BlueprintName = "Pods-SufferTest"
+               BlueprintIdentifier = "7409E312376929E18E79DC1DE95F21FF"
+               BuildableName = "ExpandingMenu.bundle"
+               BlueprintName = "ExpandingMenu-ExpandingMenu"
                ReferencedContainer = "container:Pods.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -47,9 +47,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "1FEE865CA930CAF6325DA8F3ABEEFA0B"
-            BuildableName = "Pods_SufferTest.framework"
-            BlueprintName = "Pods-SufferTest"
+            BlueprintIdentifier = "7409E312376929E18E79DC1DE95F21FF"
+            BuildableName = "ExpandingMenu.bundle"
+            BlueprintName = "ExpandingMenu-ExpandingMenu"
             ReferencedContainer = "container:Pods.xcodeproj">
          </BuildableReference>
       </MacroExpansion>

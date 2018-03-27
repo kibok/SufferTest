@@ -7,6 +7,7 @@ target 'SufferTest' do
 
   # Pods for SufferTest
   pod 'FoldingCell'
+  pod 'ExpandingMenu'
   pod 'lottie-ios'
   pod 'Firebase/Auth'
   pod 'Firebase/Core'

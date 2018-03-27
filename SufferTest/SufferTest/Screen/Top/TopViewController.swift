@@ -8,6 +8,7 @@
 
 import UIKit
 import GoogleMobileAds
+import ExpandingMenu
 
 protocol TopViewControllerDelegate{
     func didFinishLogout()
@@ -25,13 +26,14 @@ class TopViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        self.updateViews()
         
 //        bannerView.adUnitID = "ca-app-pub-1881939689743902/1144068972"
         bannerView.adUnitID = "ca-app-pub-3940256099942544/2934735716"
         bannerView.rootViewController = self
         bannerView.load(GADRequest())
+        
+        self.updateViews()
+        self.addMenuButton()
     }
     
     func updateViews() {
@@ -57,15 +59,72 @@ class TopViewController: UIViewController {
     
     // MARK: - Actions
     
-    @IBAction func touchUpInsideLogoutButton(_ sender: Any) {
+    @IBAction func touchUpInsideHistoryButton(_ sender: Any) {
+    }
+    
+    // MARK: - Private methods
+    
+    private func requestLogout() {
+        // TODO: fix bug
+        self.delegate?.didFinishLogout()
         AuthFetcher.logout(completion: {_ in
             DataManager.clear()
-            self.delegate?.didFinishLogout()
         })
     }
     
-    @IBAction func touchUpInsideHistoryButton(_ sender: Any) {
+    private func pushToHistory() {
+        self.performSegue(withIdentifier: "toHistory", sender: nil)
+    }
     
+    private func pushToSetting() {
+        self.performSegue(withIdentifier: "toSetting", sender: nil)
+    }
+    
+}
+
+
+// MARK: - Side menu
+
+extension TopViewController {
+    
+    private func addMenuButton() {
+        let menuButtonSize: CGSize = CGSize(width: 64.0, height: 64.0)
+        let menuButton = ExpandingMenuButton(frame: CGRect(origin: CGPoint.zero, size: menuButtonSize), centerImage: UIImage(named: "sample")!, centerHighlightedImage: UIImage(named: "sample")!)
+        menuButton.center = CGPoint(x: 20.0, y: 90.0)
+        menuButton.expandingDirection = .bottom
+        menuButton.menuTitleDirection = .right
+        menuButton.bottomViewAlpha = 0.7
+        menuButton.enabledExpandingAnimations = [AnimationOptions.MenuItemBound, AnimationOptions.MenuItemMoving, AnimationOptions.MenuItemFade]
+        menuButton.enabledFoldingAnimations = [AnimationOptions.MenuItemBound, AnimationOptions.MenuItemMoving, AnimationOptions.MenuItemFade]
+        
+        self.view.addSubview(menuButton)
+        
+        func showAlert(_ title: String) {
+            let alert = UIAlertController(title: title, message: nil, preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
+            self.present(alert, animated: true, completion: nil)
+        }
+        
+        let item1 = ExpandingMenuItem(size: menuButtonSize, title: "Logout", image: UIImage(named: "sample")!, highlightedImage: UIImage(named: "sample")!, backgroundImage: UIImage(named: "sample"), backgroundHighlightedImage: UIImage(named: "sample")) { () -> Void in
+            print("tap Logout")
+            self.requestLogout()
+        }
+        
+        let item2 = ExpandingMenuItem(size: menuButtonSize, title: "History", image: UIImage(named: "sample")!, highlightedImage: UIImage(named: "sample")!, backgroundImage: UIImage(named: "sample"), backgroundHighlightedImage: UIImage(named: "sample")) { () -> Void in
+            print("tap History")
+            self.pushToHistory()
+        }
+        
+        let item3 = ExpandingMenuItem(size: menuButtonSize, title: "Setting", image: UIImage(named: "sample")!, highlightedImage: UIImage(named: "sample")!, backgroundImage: UIImage(named: "sample"), backgroundHighlightedImage: UIImage(named: "sample")) { () -> Void in
+            print("tap Setting")
+            self.pushToSetting()
+        }
+        
+        let item4 = ExpandingMenuItem(size: menuButtonSize, title: "Reset", image: UIImage(named: "sample")!, highlightedImage: UIImage(named: "sample")!, backgroundImage: UIImage(named: "sample"), backgroundHighlightedImage: UIImage(named: "sample")) { () -> Void in
+            print("tap Reset")
+        }
+        
+        menuButton.addMenuItems([item1, item2, item3, item4])
     }
     
 }

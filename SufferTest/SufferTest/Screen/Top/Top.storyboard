@@ -16,7 +16,7 @@
                 <viewControllerPlaceholder storyboardName="History" id="IfO-Eg-Bkm" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hzp-14-Xga" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="577" y="323"/>
+            <point key="canvasLocation" x="575" y="411"/>
         </scene>
         <!--List-->
         <scene sceneID="sOY-du-csM">
@@ -24,7 +24,7 @@
                 <viewControllerPlaceholder storyboardName="List" id="glI-GK-UiE" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Mds-QU-L81" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="580" y="-6"/>
+            <point key="canvasLocation" x="558" y="-2"/>
         </scene>
         <!--Setting-->
         <scene sceneID="A43-nH-aWm">
@@ -32,7 +32,7 @@
                 <viewControllerPlaceholder storyboardName="Setting" id="ezT-dY-dcS" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wFd-o0-CHq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="589" y="-112"/>
+            <point key="canvasLocation" x="574" y="256"/>
         </scene>
         <!--Top View Controller-->
         <scene sceneID="4UG-Gr-Dhb">
@@ -50,10 +50,6 @@
                                     <segue destination="glI-GK-UiE" kind="show" id="MqH-1z-YyH"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zo2-W0-CfW">
-                                <rect key="frame" x="0.0" y="104" width="39" height="30"/>
-                                <state key="normal" title="Reset"/>
-                            </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0R0-gw-hl6" customClass="GADBannerView">
                                 <rect key="frame" x="0.0" y="567" width="375" height="100"/>
                                 <color key="backgroundColor" red="0.7414550781" green="0.76923285590000001" blue="0.83010525170000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -61,13 +57,6 @@
                                     <constraint firstAttribute="height" constant="100" id="2GZ-gv-Pkp"/>
                                 </constraints>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ujY-GK-S90">
-                                <rect key="frame" x="0.0" y="64" width="48" height="30"/>
-                                <state key="normal" title="Logout"/>
-                                <connections>
-                                    <action selector="touchUpInsideLogoutButton:" destination="3g2-f9-xwx" eventType="touchUpInside" id="KUb-0O-GQz"/>
-                                </connections>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BaY-1C-CQj">
                                 <rect key="frame" x="181" y="149.5" width="13.5" height="35"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="29"/>
@@ -88,34 +77,21 @@
                                     <segue destination="j0d-be-Xrt" kind="presentation" id="Wsb-4J-mBV"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WPG-jT-mNE">
-                                <rect key="frame" x="0.0" y="149" width="50" height="30"/>
-                                <state key="normal" title="History"/>
-                                <connections>
-                                    <segue destination="IfO-Eg-Bkm" kind="show" id="1fb-IN-MaY"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="Kck-AP-xuZ" firstAttribute="centerX" secondItem="5Zp-La-pZI" secondAttribute="centerX" id="0Ly-6t-fQ1"/>
                             <constraint firstItem="Y3H-ps-3u7" firstAttribute="leading" secondItem="G3n-TY-QMn" secondAttribute="leading" id="1x0-FV-Z0I"/>
-                            <constraint firstItem="WPG-jT-mNE" firstAttribute="leading" secondItem="G3n-TY-QMn" secondAttribute="leading" id="2d5-s0-YoC"/>
                             <constraint firstItem="Y3H-ps-3u7" firstAttribute="centerX" secondItem="5Zp-La-pZI" secondAttribute="centerX" id="2vN-s4-NMs"/>
                             <constraint firstItem="jgk-ui-Po5" firstAttribute="top" secondItem="BaY-1C-CQj" secondAttribute="bottom" constant="20" id="HBn-a4-YFu"/>
-                            <constraint firstItem="ujY-GK-S90" firstAttribute="leading" secondItem="G3n-TY-QMn" secondAttribute="leading" id="JcH-Qe-J3W"/>
                             <constraint firstItem="Y3H-ps-3u7" firstAttribute="centerY" secondItem="5Zp-La-pZI" secondAttribute="centerY" constant="-50" id="LW2-Jp-k9j"/>
                             <constraint firstItem="Kck-AP-xuZ" firstAttribute="top" secondItem="Y3H-ps-3u7" secondAttribute="bottom" id="LeL-jC-a30"/>
                             <constraint firstItem="BaY-1C-CQj" firstAttribute="centerX" secondItem="5Zp-La-pZI" secondAttribute="centerX" id="Pc3-Ml-iAS"/>
                             <constraint firstItem="Y3H-ps-3u7" firstAttribute="top" secondItem="jgk-ui-Po5" secondAttribute="bottom" constant="10" id="Reb-WO-NFT"/>
                             <constraint firstItem="0R0-gw-hl6" firstAttribute="leading" secondItem="G3n-TY-QMn" secondAttribute="leading" id="bdI-hn-Vf7"/>
-                            <constraint firstItem="Zo2-W0-CfW" firstAttribute="top" secondItem="ujY-GK-S90" secondAttribute="bottom" constant="10" id="dzJ-Ba-dR2"/>
                             <constraint firstItem="G3n-TY-QMn" firstAttribute="bottom" secondItem="0R0-gw-hl6" secondAttribute="bottom" id="fjV-j4-1q4"/>
                             <constraint firstItem="G3n-TY-QMn" firstAttribute="trailing" secondItem="Y3H-ps-3u7" secondAttribute="trailing" id="gE7-QL-ZwC"/>
                             <constraint firstItem="jgk-ui-Po5" firstAttribute="centerX" secondItem="5Zp-La-pZI" secondAttribute="centerX" id="gtc-UZ-aIp"/>
-                            <constraint firstItem="WPG-jT-mNE" firstAttribute="top" secondItem="Zo2-W0-CfW" secondAttribute="bottom" constant="15" id="iT5-Lq-9AW"/>
-                            <constraint firstItem="Zo2-W0-CfW" firstAttribute="leading" secondItem="G3n-TY-QMn" secondAttribute="leading" id="uxU-m0-Ofr"/>
-                            <constraint firstItem="ujY-GK-S90" firstAttribute="top" secondItem="G3n-TY-QMn" secondAttribute="top" id="vLJ-4G-vfb"/>
                             <constraint firstItem="G3n-TY-QMn" firstAttribute="trailing" secondItem="0R0-gw-hl6" secondAttribute="trailing" id="wEr-rF-pTc"/>
                             <constraint firstItem="0R0-gw-hl6" firstAttribute="centerX" secondItem="5Zp-La-pZI" secondAttribute="centerX" id="xkV-zI-pqS"/>
                         </constraints>
@@ -126,6 +102,8 @@
                         <outlet property="bannerView" destination="0R0-gw-hl6" id="CBl-pL-99G"/>
                         <outlet property="dateLabel" destination="jgk-ui-Po5" id="uZE-Bs-x0c"/>
                         <outlet property="resultAmountLabel" destination="BaY-1C-CQj" id="fua-YF-X29"/>
+                        <segue destination="IfO-Eg-Bkm" kind="show" identifier="toHistory" id="FZq-X4-wGn"/>
+                        <segue destination="ezT-dY-dcS" kind="show" identifier="toSetting" id="pPn-dj-Rsb"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1MB-S4-Ude" sceneMemberID="firstResponder"/>
@@ -138,7 +116,7 @@
                 <viewControllerPlaceholder storyboardName="AddDetail" id="j0d-be-Xrt" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2w9-tu-AiT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="576" y="129"/>
+            <point key="canvasLocation" x="587" y="132"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="jkE-I8-0Dd">
