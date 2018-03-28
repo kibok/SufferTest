@@ -23,6 +23,7 @@
 		2182875020510B5F0034A855 /* ListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2182874F20510B5F0034A855 /* ListViewModel.swift */; };
 		2182875220510C510034A855 /* TopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2182875120510C510034A855 /* TopViewController.swift */; };
 		21828755205111CD0034A855 /* TopViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21828754205111CD0034A855 /* TopViewModel.swift */; };
+		218E74B2206B8A030075F49C /* Lisences.txt in Resources */ = {isa = PBXBuildFile; fileRef = 218E74B1206B8A020075F49C /* Lisences.txt */; };
 		21C105672050D078006E81B5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21C105662050D078006E81B5 /* AppDelegate.swift */; };
 		21C1056C2050D078006E81B5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 21C1056A2050D078006E81B5 /* Main.storyboard */; };
 		21C1056E2050D078006E81B5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 21C1056D2050D078006E81B5 /* Assets.xcassets */; };
@@ -76,6 +77,7 @@
 		2182874F20510B5F0034A855 /* ListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewModel.swift; sourceTree = "<group>"; };
 		2182875120510C510034A855 /* TopViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopViewController.swift; sourceTree = "<group>"; };
 		21828754205111CD0034A855 /* TopViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopViewModel.swift; sourceTree = "<group>"; };
+		218E74B1206B8A020075F49C /* Lisences.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Lisences.txt; sourceTree = "<group>"; };
 		21C105632050D078006E81B5 /* SufferTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SufferTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		21C105662050D078006E81B5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		21C1056B2050D078006E81B5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -247,6 +249,7 @@
 			children = (
 				21C1056D2050D078006E81B5 /* Assets.xcassets */,
 				21C1056F2050D078006E81B5 /* LaunchScreen.storyboard */,
+				218E74B1206B8A020075F49C /* Lisences.txt */,
 				C4680E862056A48A00684033 /* GoogleService-Info.plist */,
 			);
 			path = Resources;
@@ -453,6 +456,7 @@
 				21C105712050D078006E81B5 /* LaunchScreen.storyboard in Resources */,
 				C4173C3E2054297D007A3F62 /* Setting.storyboard in Resources */,
 				C4E2CB6F205D436800894CA5 /* FirstSetting.storyboard in Resources */,
+				218E74B2206B8A030075F49C /* Lisences.txt in Resources */,
 				21C1056E2050D078006E81B5 /* Assets.xcassets in Resources */,
 				21C1056C2050D078006E81B5 /* Main.storyboard in Resources */,
 				215A9A19205F653900512508 /* AddDetail.storyboard in Resources */,
