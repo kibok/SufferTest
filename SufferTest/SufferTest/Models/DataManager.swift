@@ -16,13 +16,11 @@ class DataManager {
     var ongoingProject: Project? = nil
     var projectHistory: [Project] = []
     
-    private init() {
-    }
+    private init() { }
     
     static func updateAll(response: UserHistory) {
         shared.ongoingProject = response.ongoingProject
         shared.projectHistory = response.projectHistory
-        
     }
     
     static func updateongoing(project: Project) {
