@@ -15,3 +15,11 @@ target 'SufferTest' do
   pod 'Firebase/AdMob'
   
 end
+
+target 'SufferTestTests' do
+    
+    pod 'Firebase/Auth'
+    pod 'Firebase/Core'
+    pod 'Firebase/Firestore'
+
+end

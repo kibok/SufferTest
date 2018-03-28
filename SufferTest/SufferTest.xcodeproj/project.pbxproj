@@ -30,6 +30,7 @@
 		21FE4F8420688551003E07C3 /* AlertExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21FE4F8320688551003E07C3 /* AlertExtension.swift */; };
 		21FE4F862068BF65003E07C3 /* UIKitExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21FE4F852068BF64003E07C3 /* UIKitExtensions.swift */; };
 		26307BE515BD8DB38BB7AF3E /* Pods_SufferTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A514FBDBEB0A2340FA771EB1 /* Pods_SufferTest.framework */; };
+		643CA63A468FB3C19D3ADDB3 /* libPods-SufferTestTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F60C9CC6159E4B8A536085AA /* libPods-SufferTestTests.a */; };
 		C4173C3C2054285A007A3F62 /* Top.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C4173C3B2054285A007A3F62 /* Top.storyboard */; };
 		C4173C3E2054297D007A3F62 /* Setting.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C4173C3D2054297D007A3F62 /* Setting.storyboard */; };
 		C4680E872056A48A00684033 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C4680E862056A48A00684033 /* GoogleService-Info.plist */; };
@@ -84,6 +85,8 @@
 		21C42C0FB0C013F0348C5FD2 /* Pods-SufferTest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SufferTest.release.xcconfig"; path = "Pods/Target Support Files/Pods-SufferTest/Pods-SufferTest.release.xcconfig"; sourceTree = "<group>"; };
 		21FE4F8320688551003E07C3 /* AlertExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertExtension.swift; sourceTree = "<group>"; };
 		21FE4F852068BF64003E07C3 /* UIKitExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIKitExtensions.swift; sourceTree = "<group>"; };
+		2880A22F3E6E8A624412F23A /* Pods-SufferTestTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SufferTestTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SufferTestTests/Pods-SufferTestTests.release.xcconfig"; sourceTree = "<group>"; };
+		3124D01617F168FF1619564C /* Pods-SufferTestTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SufferTestTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SufferTestTests/Pods-SufferTestTests.debug.xcconfig"; sourceTree = "<group>"; };
 		A514FBDBEB0A2340FA771EB1 /* Pods_SufferTest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SufferTest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C4173C3B2054285A007A3F62 /* Top.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Top.storyboard; sourceTree = "<group>"; };
 		C4173C3D2054297D007A3F62 /* Setting.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Setting.storyboard; sourceTree = "<group>"; };
@@ -98,6 +101,7 @@
 		C4E2CB72205D445C00894CA5 /* ConfirmationFirstSettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmationFirstSettingViewController.swift; sourceTree = "<group>"; };
 		C4E7C1B020569ECC0003736F /* AutoRootController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoRootController.swift; sourceTree = "<group>"; };
 		C4E7C1B220569FE40003736F /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		F60C9CC6159E4B8A536085AA /* libPods-SufferTestTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SufferTestTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +109,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				643CA63A468FB3C19D3ADDB3 /* libPods-SufferTestTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -330,6 +335,7 @@
 			isa = PBXGroup;
 			children = (
 				A514FBDBEB0A2340FA771EB1 /* Pods_SufferTest.framework */,
+				F60C9CC6159E4B8A536085AA /* libPods-SufferTestTests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -339,6 +345,8 @@
 			children = (
 				1F3F56D78DD5D08CFAA18C13 /* Pods-SufferTest.debug.xcconfig */,
 				21C42C0FB0C013F0348C5FD2 /* Pods-SufferTest.release.xcconfig */,
+				3124D01617F168FF1619564C /* Pods-SufferTestTests.debug.xcconfig */,
+				2880A22F3E6E8A624412F23A /* Pods-SufferTestTests.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -350,9 +358,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2120AA8320633FAE00B9C587 /* Build configuration list for PBXNativeTarget "SufferTestTests" */;
 			buildPhases = (
+				E2ECB522239FFA5E509CE73B /* [CP] Check Pods Manifest.lock */,
 				2120AA7820633FAE00B9C587 /* Sources */,
 				2120AA7920633FAE00B9C587 /* Frameworks */,
 				2120AA7A20633FAE00B9C587 /* Resources */,
+				29E0C838A2E1370FB068578B /* [CP] Embed Pods Frameworks */,
+				01BBD06FA119A26507147401 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -452,6 +463,39 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		01BBD06FA119A26507147401 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-SufferTestTests/Pods-SufferTestTests-resources.sh",
+				"${PODS_CONFIGURATION_BUILD_DIR}/gRPC-library/gRPCCertificates.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/gRPCCertificates.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SufferTestTests/Pods-SufferTestTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		29E0C838A2E1370FB068578B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SufferTestTests/Pods-SufferTestTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		4701A050D3D0EA2623C35BFF /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -492,19 +536,19 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-SufferTest/Pods-SufferTest-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/BoringSSL/openssl.framework",
+				"${BUILT_PRODUCTS_DIR}/BoringSSL-framework/openssl.framework",
 				"${BUILT_PRODUCTS_DIR}/ExpandingMenu/ExpandingMenu.framework",
 				"${BUILT_PRODUCTS_DIR}/FoldingCell/FoldingCell.framework",
-				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
-				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
-				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
-				"${BUILT_PRODUCTS_DIR}/gRPC/GRPCClient.framework",
-				"${BUILT_PRODUCTS_DIR}/gRPC-Core/grpc.framework",
-				"${BUILT_PRODUCTS_DIR}/gRPC-ProtoRPC/ProtoRPC.framework",
-				"${BUILT_PRODUCTS_DIR}/gRPC-RxLibrary/RxLibrary.framework",
-				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher-framework/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac-framework/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/Protobuf-framework/Protobuf.framework",
+				"${BUILT_PRODUCTS_DIR}/gRPC-framework/GRPCClient.framework",
+				"${BUILT_PRODUCTS_DIR}/gRPC-Core-framework/grpc.framework",
+				"${BUILT_PRODUCTS_DIR}/gRPC-ProtoRPC-framework/ProtoRPC.framework",
+				"${BUILT_PRODUCTS_DIR}/gRPC-RxLibrary-framework/RxLibrary.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library-framework/leveldb.framework",
 				"${BUILT_PRODUCTS_DIR}/lottie-ios/Lottie.framework",
-				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb-framework/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
@@ -525,6 +569,24 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SufferTest/Pods-SufferTest-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E2ECB522239FFA5E509CE73B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SufferTestTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -601,10 +663,12 @@
 /* Begin XCBuildConfiguration section */
 		2120AA8420633FAE00B9C587 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3124D01617F168FF1619564C /* Pods-SufferTestTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = "";
+				HEADER_SEARCH_PATHS = "${PODS_ROOT}/Firebase/Core/Sources";
 				INFOPLIST_FILE = SufferTestTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.fenrir-inc.SufferTestTests";
@@ -617,10 +681,12 @@
 		};
 		2120AA8520633FAE00B9C587 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2880A22F3E6E8A624412F23A /* Pods-SufferTestTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = "";
+				HEADER_SEARCH_PATHS = "${PODS_ROOT}/Firebase/Core/Sources";
 				INFOPLIST_FILE = SufferTestTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.fenrir-inc.SufferTestTests";
@@ -748,7 +814,7 @@
 				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = SufferTest/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.fenrir-inc.SufferTest";
+				PRODUCT_BUNDLE_IDENTIFIER = SufferTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
@@ -766,7 +832,7 @@
 				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = SufferTest/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.fenrir-inc.SufferTest";
+				PRODUCT_BUNDLE_IDENTIFIER = SufferTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;

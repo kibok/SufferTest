@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import Firebase
 
 /// 상세
 ///
