@@ -19,10 +19,10 @@ class TopViewController: UIViewController, AuthErrorHandling {
     @IBOutlet var resultAmountLabel: UILabel!
     @IBOutlet var dateLabel: UILabel!
     
+    @IBOutlet weak var bannerView: GADBannerView!
+    
     var viewModel: TopViewModel!
     var delegate: TopViewControllerDelegate?
-    
-    @IBOutlet weak var bannerView: GADBannerView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -84,7 +84,6 @@ class TopViewController: UIViewController, AuthErrorHandling {
     }
     
 }
-
 
 // MARK: - Side menu
 
