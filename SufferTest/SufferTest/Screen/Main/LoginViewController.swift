@@ -8,6 +8,7 @@
 
 import UIKit
 import Firebase
+import SVProgressHUD
 
 protocol LoginViewControllerDelegate{
     func didFinishLogin()
@@ -28,8 +29,7 @@ class LoginViewController: UIViewController, AuthErrorHandling, FirestoreErrorHa
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        self.handle = Auth.auth().addStateDidChangeListener { (auth, user) in
-        }
+        self.handle = Auth.auth().addStateDidChangeListener { _,_ in } // Nothing to do
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -49,14 +49,19 @@ class LoginViewController: UIViewController, AuthErrorHandling, FirestoreErrorHa
     // action
     
     @IBAction func touchUpInsideLoginButton(_ sender: Any) {
-        let id = self.idTextField.text ?? ""
-        let pass = self.passwordTextField.text ?? ""
-        AuthFetcher.login(email: "dearkibok@gmail.com", password: "0000001", completion: { error in
+//        let id = self.idTextField.text ?? ""
+//        let pass = self.passwordTextField.text ?? ""
+        let id = "dearkibok@gmail.com"
+        let pass = "0000001"
+        ProgressDialog.shared.show()
+        AuthFetcher.login(email: id, password: pass, completion: { error in
             if let error = error {
+                ProgressDialog.shared.remove()
                 self.handleAuthError(error)
             } else {
                 print("success login")
                 HistoryFetcher.readProject(completion: { error in
+                    ProgressDialog.shared.remove()
                     if let error = error {
                         self.handleFirestoreError(error)
                     } else {
@@ -74,7 +79,9 @@ class LoginViewController: UIViewController, AuthErrorHandling, FirestoreErrorHa
     @IBAction func touchUpInsideSignupButton(_ sender: Any) {
         let id = self.idTextField.text ?? ""
         let pass = self.passwordTextField.text ?? ""
+        ProgressDialog.shared.show()
         AuthFetcher.signup(email: id, password: pass, completion: { error in
+            ProgressDialog.shared.remove()
             if let error = error {
                 self.handleAuthError(error)
             } else {
@@ -87,3 +94,5 @@ class LoginViewController: UIViewController, AuthErrorHandling, FirestoreErrorHa
     }
     
 }
+
+

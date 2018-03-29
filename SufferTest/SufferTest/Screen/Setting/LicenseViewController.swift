@@ -14,7 +14,6 @@ class LicenseViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
         self.textView.text = self.readLisences()
     }
     

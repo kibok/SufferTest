@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		210256A8206A1AB600B6433E /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 210256A7206A1AB600B6433E /* SettingViewController.swift */; };
+		210F338F206CBD25005BB000 /* ProgressDialog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 210F338E206CBD25005BB000 /* ProgressDialog.swift */; };
 		2120AA73206338F300B9C587 /* HistoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2120AA72206338F300B9C587 /* HistoryTableViewCell.swift */; };
 		2120AA752063392600B9C587 /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2120AA742063392600B9C587 /* HistoryViewController.swift */; };
 		2120AA7720633B4500B9C587 /* List.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2120AA7620633B4500B9C587 /* List.storyboard */; };
@@ -61,6 +62,7 @@
 /* Begin PBXFileReference section */
 		1F3F56D78DD5D08CFAA18C13 /* Pods-SufferTest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SufferTest.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SufferTest/Pods-SufferTest.debug.xcconfig"; sourceTree = "<group>"; };
 		210256A7206A1AB600B6433E /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
+		210F338E206CBD25005BB000 /* ProgressDialog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressDialog.swift; sourceTree = "<group>"; };
 		2120AA72206338F300B9C587 /* HistoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryTableViewCell.swift; sourceTree = "<group>"; };
 		2120AA742063392600B9C587 /* HistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryViewController.swift; sourceTree = "<group>"; };
 		2120AA7620633B4500B9C587 /* List.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = List.storyboard; sourceTree = "<group>"; };
@@ -160,6 +162,7 @@
 			isa = PBXGroup;
 			children = (
 				2120AA892063994300B9C587 /* EventHandler.swift */,
+				210F338E206CBD25005BB000 /* ProgressDialog.swift */,
 			);
 			path = ViewParts;
 			sourceTree = "<group>";
@@ -626,6 +629,7 @@
 				21828755205111CD0034A855 /* TopViewModel.swift in Sources */,
 				215A9A16205F4EB300512508 /* FoundationExtensions.swift in Sources */,
 				21FE4F8420688551003E07C3 /* AlertExtension.swift in Sources */,
+				210F338F206CBD25005BB000 /* ProgressDialog.swift in Sources */,
 				21C105672050D078006E81B5 /* AppDelegate.swift in Sources */,
 				C473ABA9205A8F31004609E4 /* API.swift in Sources */,
 				219D1DF5206C6DBB00C18886 /* LicenseViewController.swift in Sources */,
