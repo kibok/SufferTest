@@ -16,9 +16,9 @@ struct ListViewModel {
 class ListViewController: UIViewController {
     
     let kCloseCellHeight: CGFloat = 60 + 30
-    let kOpenCellHeight: CGFloat = 180 + 30
-    let kRowsCount = 3
-    var cellHeights: [[CGFloat]] = []
+    let kOpenCellHeight: CGFloat = 150 + 30
+    let kRowsCount = 2
+    var cellHeights: [CGFloat] = []
     
     var viewModel: ListViewModel!
     
@@ -35,12 +35,7 @@ class ListViewController: UIViewController {
         if let details = DataManager.shared.ongoingProject?.details {
             self.viewModel = ListViewModel(details: details)
         }
-        
-        cellHeights = [Array(repeating: kCloseCellHeight, count: kRowsCount),
-                       Array(repeating: kCloseCellHeight, count: kRowsCount),
-                       Array(repeating: kCloseCellHeight, count: kRowsCount),
-                       Array(repeating: kCloseCellHeight, count: kRowsCount),
-                       Array(repeating: kCloseCellHeight, count: kRowsCount)]
+        cellHeights = Array(repeating: kCloseCellHeight, count: self.viewModel.details.count)
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -70,7 +65,7 @@ extension ListViewController: UITableViewDataSource, UITableViewDelegate {
 
         cell.backgroundColor = .clear
 
-        if cellHeights[indexPath.section][indexPath.row] == kCloseCellHeight {
+        if cellHeights[indexPath.row] == kCloseCellHeight {
             cell.unfold(false, animated: false, completion: nil)
         } else {
             cell.unfold(true, animated: false, completion: nil)
@@ -79,7 +74,7 @@ extension ListViewController: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "ListCell", for: indexPath) as! ListTableViewCell
-        let durations: [TimeInterval] = [0.26, 0.2, 0.2]
+        let durations: [TimeInterval] = [0.1, 0.1, 0.1]
         cell.durationsForExpandedState = durations
         cell.durationsForCollapsedState = durations
         cell.setupCell(self.viewModel.details[indexPath.row])
@@ -87,7 +82,7 @@ extension ListViewController: UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return cellHeights[indexPath.section][indexPath.row]
+        return cellHeights[indexPath.row]
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -97,15 +92,15 @@ extension ListViewController: UITableViewDataSource, UITableViewDelegate {
         }
         
         var duration = 0.0
-        let cellIsCollapsed = cellHeights[indexPath.section][indexPath.row] == kCloseCellHeight
+        let cellIsCollapsed = cellHeights[indexPath.row] == kCloseCellHeight
         if cellIsCollapsed {
-            cellHeights[indexPath.section][indexPath.row] = kOpenCellHeight
-            cell.unfold(true, animated: true, completion: nil)
-            duration = 0.5
+            cellHeights[indexPath.row] = kOpenCellHeight
+            cell.unfold(true, animated: false, completion: nil)
+            duration = 0.3
         } else {
-            cellHeights[indexPath.section][indexPath.row] = kCloseCellHeight
-            cell.unfold(false, animated: true, completion: nil)
-            duration = 0.8
+            cellHeights[indexPath.row] = kCloseCellHeight
+            cell.unfold(false, animated: false, completion: nil)
+            duration = 0.3
         }
         
         UIView.animate(withDuration: duration, delay: 0, options: .curveEaseOut, animations: { () -> Void in

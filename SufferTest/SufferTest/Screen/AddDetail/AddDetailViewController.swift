@@ -59,10 +59,6 @@ class AddDetailViewController: UIViewController, FirestoreErrorHandling {
             return "무엇에 썼는지 입력해주세요"
         }
         
-        if let int = text.int, int <= 0 || int > 31 {
-            return "올바른 기간을 입력해주세요"
-        }
-        
         return nil
     }
     

@@ -6,8 +6,7 @@
 //  Copyright © 2018年 Fenrir Inc. All rights reserved.
 //
 
-import Foundation
-import SVProgressHUD
+import UIKit
 
 class ProgressDialog {
     

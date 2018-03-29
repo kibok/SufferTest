@@ -55,7 +55,7 @@
                                                     </constraints>
                                                 </view>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="f5w-5R-chZ" userLabel="Container">
-                                                    <rect key="frame" x="15" y="90" width="345" height="180"/>
+                                                    <rect key="frame" x="15" y="90" width="345" height="150"/>
                                                     <subviews>
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4tf-od-siX">
                                                             <rect key="frame" x="0.0" y="0.0" width="345" height="60"/>
@@ -97,7 +97,7 @@
                                                     </subviews>
                                                     <color key="backgroundColor" red="0.17627886579999999" green="0.68900295619999996" blue="0.80458630180000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="height" constant="180" id="0Ie-Ew-R3h"/>
+                                                        <constraint firstAttribute="height" constant="150" id="0Ie-Ew-R3h"/>
                                                         <constraint firstAttribute="trailing" secondItem="4tf-od-siX" secondAttribute="trailing" id="DUf-pt-KuD"/>
                                                         <constraint firstItem="sX1-Oa-Ckc" firstAttribute="leading" secondItem="f5w-5R-chZ" secondAttribute="leading" constant="15" id="EbR-el-04n"/>
                                                         <constraint firstItem="4tf-od-siX" firstAttribute="top" secondItem="f5w-5R-chZ" secondAttribute="top" id="Fyo-DU-h3w"/>

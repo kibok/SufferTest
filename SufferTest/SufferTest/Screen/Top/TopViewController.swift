@@ -34,6 +34,8 @@ class TopViewController: UIViewController, AuthErrorHandling {
         
         self.updateViews()
         self.addMenuButton()
+        
+        self.view.backgroundColor = UIColor(patternImage: UIImage(named: "bg")!)
     }
     
     func updateViews() {
