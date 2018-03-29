@@ -25,6 +25,6 @@ target 'SufferTestTests' do
 end
 
 post_install do | installer |
-    acknowledgements = File.read('Pods/Target Support Files/Pods-SufferTest/Pods-SufferTest-Acknowledgements.plist', :encoding => Encoding::UTF_8)
+    acknowledgements = File.read('Pods/Target Support Files/Pods-SufferTest/Pods-SufferTest-Acknowledgements.markdown', :encoding => Encoding::UTF_8)
     File.write('../SufferTest/SufferTest/Resources/Lisences.txt', acknowledgements)
 end

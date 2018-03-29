@@ -24,6 +24,7 @@
 		2182875220510C510034A855 /* TopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2182875120510C510034A855 /* TopViewController.swift */; };
 		21828755205111CD0034A855 /* TopViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21828754205111CD0034A855 /* TopViewModel.swift */; };
 		218E74B2206B8A030075F49C /* Lisences.txt in Resources */ = {isa = PBXBuildFile; fileRef = 218E74B1206B8A020075F49C /* Lisences.txt */; };
+		219D1DF5206C6DBB00C18886 /* LicenseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 219D1DF4206C6DBB00C18886 /* LicenseViewController.swift */; };
 		21C105672050D078006E81B5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21C105662050D078006E81B5 /* AppDelegate.swift */; };
 		21C1056C2050D078006E81B5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 21C1056A2050D078006E81B5 /* Main.storyboard */; };
 		21C1056E2050D078006E81B5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 21C1056D2050D078006E81B5 /* Assets.xcassets */; };
@@ -78,6 +79,7 @@
 		2182875120510C510034A855 /* TopViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopViewController.swift; sourceTree = "<group>"; };
 		21828754205111CD0034A855 /* TopViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopViewModel.swift; sourceTree = "<group>"; };
 		218E74B1206B8A020075F49C /* Lisences.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Lisences.txt; sourceTree = "<group>"; };
+		219D1DF4206C6DBB00C18886 /* LicenseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LicenseViewController.swift; sourceTree = "<group>"; };
 		21C105632050D078006E81B5 /* SufferTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SufferTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		21C105662050D078006E81B5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		21C1056B2050D078006E81B5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -316,6 +318,7 @@
 			children = (
 				C4173C3D2054297D007A3F62 /* Setting.storyboard */,
 				210256A7206A1AB600B6433E /* SettingViewController.swift */,
+				219D1DF4206C6DBB00C18886 /* LicenseViewController.swift */,
 			);
 			path = Setting;
 			sourceTree = "<group>";
@@ -625,6 +628,7 @@
 				21FE4F8420688551003E07C3 /* AlertExtension.swift in Sources */,
 				21C105672050D078006E81B5 /* AppDelegate.swift in Sources */,
 				C473ABA9205A8F31004609E4 /* API.swift in Sources */,
+				219D1DF5206C6DBB00C18886 /* LicenseViewController.swift in Sources */,
 				2182874B2050E0200034A855 /* ListViewController.swift in Sources */,
 				C4E2CB71205D442B00894CA5 /* InputFirstSettingViewController.swift in Sources */,
 				210256A8206A1AB600B6433E /* SettingViewController.swift in Sources */,

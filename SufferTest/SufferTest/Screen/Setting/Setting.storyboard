@@ -66,16 +66,34 @@
             </objects>
             <point key="canvasLocation" x="-178" y="-380"/>
         </scene>
-        <!--View Controller-->
+        <!--License View Controller-->
         <scene sceneID="kae-l4-9Oe">
             <objects>
-                <viewController id="8ET-QH-F6o" sceneMemberID="viewController">
+                <viewController id="8ET-QH-F6o" customClass="LicenseViewController" customModule="SufferTest" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="k8t-hs-MoK">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Ja5-Sw-tfL">
+                                <rect key="frame" x="15" y="35" width="345" height="617"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Ja5-Sw-tfL" firstAttribute="top" secondItem="oM6-TP-5JQ" secondAttribute="top" constant="15" id="BE9-NL-CCw"/>
+                            <constraint firstItem="Ja5-Sw-tfL" firstAttribute="leading" secondItem="oM6-TP-5JQ" secondAttribute="leading" constant="15" id="PRK-gY-f1v"/>
+                            <constraint firstItem="oM6-TP-5JQ" firstAttribute="bottom" secondItem="Ja5-Sw-tfL" secondAttribute="bottom" constant="15" id="WJT-Dw-Cyd"/>
+                            <constraint firstItem="oM6-TP-5JQ" firstAttribute="trailing" secondItem="Ja5-Sw-tfL" secondAttribute="trailing" constant="15" id="pCC-4A-dyd"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="oM6-TP-5JQ"/>
                     </view>
+                    <connections>
+                        <outlet property="textView" destination="Ja5-Sw-tfL" id="T8A-pm-Sb4"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x6W-7Y-Djx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

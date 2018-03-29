@@ -69,7 +69,7 @@ extension SettingViewController: UITableViewDelegate, UITableViewDataSource {
         case .terms:
             print("c")
         case .license:
-            print("d")
+            self.performSegue(withIdentifier: "toLicense", sender: nil)
         case .delete:
             print("e")
         }
