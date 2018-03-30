@@ -41,7 +41,7 @@ class LoginViewController: UIViewController, AuthErrorHandling, FirestoreErrorHa
     
     // unwind segue
     
-    @IBAction func backFromFirstSetting(segue:UIStoryboardSegue) {
+    @IBAction func backFromFirstSetting(segue: UIStoryboardSegue) {
         self.delegate?.didFinishLogin()
     }
     

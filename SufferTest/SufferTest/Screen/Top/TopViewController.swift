@@ -34,8 +34,6 @@ class TopViewController: UIViewController, AuthErrorHandling {
         
         self.updateViews()
         self.addMenuButton()
-        
-        self.view.backgroundColor = UIColor(patternImage: UIImage(named: "bg")!)
     }
     
     func updateViews() {
@@ -48,15 +46,32 @@ class TopViewController: UIViewController, AuthErrorHandling {
         if self.viewModel.isDday {
             // 결산 화면 표시하기
         } else {
+            self.view.backgroundColor = self.viewModel.resultState.backgroundColor
             self.resultAmountLabel.text = "남은금액 " + self.viewModel.resultAmount.currencyFormat
             self.dateLabel.text = "\(self.viewModel.today) 일째 / \(self.viewModel.period)"
         }
+    }
+    
+    func setAnimation() {
+//        self.view.backgroundColor = UIColor(patternImage: UIImage(named: "bg")!)
+//        UIView.transition(with: self.view, duration: 1, options: .transitionCrossDissolve, animations: {
+//            self.view.backgroundColor = UIColor(patternImage: UIImage(named: "bg")!)
+//        })
+        
+        UIView.transition(with: self.view, duration: 3, options: .transitionCrossDissolve, animations: {
+            self.view.backgroundColor = UIColor(patternImage: UIImage(named: "bg")!)
+        })
+        
+        UIView.transition(with: (self.navigationController?.navigationBar)!, duration: 3, options: .transitionCrossDissolve, animations: {
+            self.navigationController?.navigationBar.setBackgroundImage(UIImage(named: "bg")!, for: .default)
+        })
     }
     
     // MARK: - Unwind segue
 
     @IBAction func backToTop(segue:UIStoryboardSegue) {
         self.updateViews()
+        self.setAnimation()
     }
     
     // MARK: - Actions
@@ -100,7 +115,6 @@ extension TopViewController {
         menuButton.bottomViewAlpha = 0.7
         menuButton.enabledExpandingAnimations = [AnimationOptions.MenuItemBound, AnimationOptions.MenuItemMoving, AnimationOptions.MenuItemFade]
         menuButton.enabledFoldingAnimations = [AnimationOptions.MenuItemBound, AnimationOptions.MenuItemMoving, AnimationOptions.MenuItemFade]
-        
         self.view.addSubview(menuButton)
         
         func showAlert(_ title: String) {
@@ -113,21 +127,17 @@ extension TopViewController {
             print("tap Logout")
             self.requestLogout()
         }
-        
         let item2 = ExpandingMenuItem(size: menuButtonSize, title: "History", image: UIImage(named: "sample")!, highlightedImage: UIImage(named: "sample")!, backgroundImage: UIImage(named: "sample"), backgroundHighlightedImage: UIImage(named: "sample")) { () -> Void in
             print("tap History")
             self.pushToHistory()
         }
-        
         let item3 = ExpandingMenuItem(size: menuButtonSize, title: "Setting", image: UIImage(named: "sample")!, highlightedImage: UIImage(named: "sample")!, backgroundImage: UIImage(named: "sample"), backgroundHighlightedImage: UIImage(named: "sample")) { () -> Void in
             print("tap Setting")
             self.pushToSetting()
         }
-        
         let item4 = ExpandingMenuItem(size: menuButtonSize, title: "Reset", image: UIImage(named: "sample")!, highlightedImage: UIImage(named: "sample")!, backgroundImage: UIImage(named: "sample"), backgroundHighlightedImage: UIImage(named: "sample")) { () -> Void in
             print("tap Reset")
         }
-        
         menuButton.addMenuItems([item1, item2, item3, item4])
     }
     

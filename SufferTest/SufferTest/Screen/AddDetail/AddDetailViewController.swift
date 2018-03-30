@@ -54,11 +54,9 @@ class AddDetailViewController: UIViewController, FirestoreErrorHandling {
         guard let text = self.titleTextField.text else {
             return "실패"
         }
-        
         if text == "" {
             return "무엇에 썼는지 입력해주세요"
         }
-        
         return nil
     }
     
@@ -66,11 +64,9 @@ class AddDetailViewController: UIViewController, FirestoreErrorHandling {
         guard let text = self.amountTextField.text else {
             return "실패"
         }
-        
         if text == "" {
             return "금액을 입력해주세요"
         }
-        
         if let int = text.int, int <= 0 {
             return "올바른 금액을 입력해주세요"
         }
