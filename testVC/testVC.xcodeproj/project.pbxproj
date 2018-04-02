@@ -12,6 +12,7 @@
 		217C7E65206DBCE7008B1C42 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 217C7E63206DBCE7008B1C42 /* Main.storyboard */; };
 		217C7E67206DBCE7008B1C42 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 217C7E66206DBCE7008B1C42 /* Assets.xcassets */; };
 		217C7E6A206DBCE7008B1C42 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 217C7E68206DBCE7008B1C42 /* LaunchScreen.storyboard */; };
+		21B0F2512071BEB000078D18 /* KeyBoardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21B0F2502071BEB000078D18 /* KeyBoardViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		217C7E66206DBCE7008B1C42 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		217C7E69206DBCE7008B1C42 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		217C7E6B206DBCE7008B1C42 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		21B0F2502071BEB000078D18 /* KeyBoardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyBoardViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +58,7 @@
 			children = (
 				217C7E5F206DBCE7008B1C42 /* AppDelegate.swift */,
 				217C7E61206DBCE7008B1C42 /* ViewController.swift */,
+				21B0F2502071BEB000078D18 /* KeyBoardViewController.swift */,
 				217C7E63206DBCE7008B1C42 /* Main.storyboard */,
 				217C7E66206DBCE7008B1C42 /* Assets.xcassets */,
 				217C7E68206DBCE7008B1C42 /* LaunchScreen.storyboard */,
@@ -138,6 +141,7 @@
 			files = (
 				217C7E62206DBCE7008B1C42 /* ViewController.swift in Sources */,
 				217C7E60206DBCE7008B1C42 /* AppDelegate.swift in Sources */,
+				21B0F2512071BEB000078D18 /* KeyBoardViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
