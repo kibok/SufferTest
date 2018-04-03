@@ -21,12 +21,12 @@ class ViewController: UIViewController {
     }
     
     @IBAction func testButton(_ sender: Any) {
-//        DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
-//            UIView.transition(with: self.view, duration: 1, options: .transitionCrossDissolve, animations: {
-//                self.view.backgroundColor = UIColor(patternImage: UIImage(named: "bg")!)
-//            })
-//        }
-//
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
+            UIView.transition(with: self.view, duration: 1, options: .transitionCrossDissolve, animations: {
+                self.view.backgroundColor = UIColor(patternImage: UIImage(named: "bg")!)
+            })
+        }
+        
 //        UIView.transition(with: (self.navigationController?.navigationBar)!, duration: 1, options: .transitionCrossDissolve, animations: {
 //            self.navigationController?.navigationBar.setBackgroundImage(UIImage(named: "bg")!, for: .default)
 //        })

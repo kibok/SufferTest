@@ -76,6 +76,7 @@ class KeyBoardViewController: UIViewController {
         case false:
             self.editButton.setTitle("Edit", for: .normal)
         }
+
     }
     
 }
@@ -135,3 +136,4 @@ extension String {
     }
     
 }
+
