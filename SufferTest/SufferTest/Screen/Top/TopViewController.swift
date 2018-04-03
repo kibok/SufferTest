@@ -33,6 +33,7 @@ class TopViewController: UIViewController, AuthErrorHandling {
         bannerView.load(GADRequest())
         
         self.updateViews()
+        self.view.backgroundColor = UIColor(patternImage: self.viewModel.resultState.backgroundImage)
         self.addMenuButton()
     }
     
@@ -46,24 +47,20 @@ class TopViewController: UIViewController, AuthErrorHandling {
         if self.viewModel.isDday {
             // 결산 화면 표시하기
         } else {
-            self.view.backgroundColor = self.viewModel.resultState.backgroundColor
             self.resultAmountLabel.text = "남은금액 " + self.viewModel.resultAmount.currencyFormat
             self.dateLabel.text = "\(self.viewModel.today) 일째 / \(self.viewModel.period)"
         }
     }
     
     func setAnimation() {
-//        self.view.backgroundColor = UIColor(patternImage: UIImage(named: "bg")!)
-//        UIView.transition(with: self.view, duration: 1, options: .transitionCrossDissolve, animations: {
-//            self.view.backgroundColor = UIColor(patternImage: UIImage(named: "bg")!)
-//        })
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
+            UIView.transition(with: self.view, duration: 1, options: .transitionCrossDissolve, animations: {
+                self.view.backgroundColor = UIColor(patternImage: self.viewModel.resultState.backgroundImage)
+            })
+        }
         
-        UIView.transition(with: self.view, duration: 3, options: .transitionCrossDissolve, animations: {
-            self.view.backgroundColor = UIColor(patternImage: UIImage(named: "bg")!)
-        })
-        
-        UIView.transition(with: (self.navigationController?.navigationBar)!, duration: 3, options: .transitionCrossDissolve, animations: {
-            self.navigationController?.navigationBar.setBackgroundImage(UIImage(named: "bg")!, for: .default)
+        UIView.transition(with: (self.navigationController?.navigationBar)!, duration: 1, options: .transitionCrossDissolve, animations: {
+            self.navigationController?.navigationBar.setBackgroundImage(self.viewModel.resultState.backgroundImage, for: .default)
         })
     }
     
@@ -109,7 +106,7 @@ extension TopViewController {
     private func addMenuButton() {
         let menuButtonSize: CGSize = CGSize(width: 64.0, height: 64.0)
         let menuButton = ExpandingMenuButton(frame: CGRect(origin: CGPoint.zero, size: menuButtonSize), centerImage: UIImage(named: "sample")!, centerHighlightedImage: UIImage(named: "sample")!)
-        menuButton.center = CGPoint(x: 20.0, y: 90.0)
+        menuButton.center = CGPoint(x: 20.0, y: 100.0)
         menuButton.expandingDirection = .bottom
         menuButton.menuTitleDirection = .right
         menuButton.bottomViewAlpha = 0.7

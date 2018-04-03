@@ -63,20 +63,21 @@ struct TopViewModel {
             }
         }
         
-        var backgroundColor: UIColor {
+        var backgroundImage: UIImage {
             switch self {
             case .over:
-                return UIColor.white
+                return UIImage(named: "back_image_green")!
             case  .full:
-                return UIColor.green
+                return UIImage(named: "back_image_blue")!
             case .soso:
-                return UIColor.blue
+                return UIImage(named: "back_image_yellow")!
             case .warning:
-                return UIColor.red
+                return UIImage(named: "back_image_red")!
             case .end:
-                return UIColor.black
+                return UIImage(named: "back_image_black")!
             }
         }
+        
     }
     
     let state: ProjectState

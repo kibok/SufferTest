@@ -25,10 +25,19 @@
                                     <segue destination="4BH-xg-ZAn" kind="presentation" modalPresentationStyle="overFullScreen" id="BKw-SR-FNG"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Rm-zK-fGK">
+                                <rect key="frame" x="164" y="398" width="46" height="30"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="testButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="986-PA-Rrl"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.60439483706794572" green="0.78089308375634514" blue="0.56565244336749143" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="7Rm-zK-fGK" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="7m0-aO-pik"/>
                             <constraint firstItem="FyJ-jk-3qj" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="DMr-t2-8N6"/>
+                            <constraint firstItem="7Rm-zK-fGK" firstAttribute="top" secondItem="FyJ-jk-3qj" secondAttribute="bottom" constant="50" id="jvV-zX-1sc"/>
                             <constraint firstItem="FyJ-jk-3qj" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="laI-7a-4l0"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>

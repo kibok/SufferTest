@@ -53,15 +53,13 @@ open class Calculator {
             throw CalculatorError.invalidCharater
         }
         
-        guard input.characters.count == 1 else {
+        guard input.count == 1 else {
             throw CalculatorError.multipleCharacters
         }
         
         // If the inputted character is a number (between 0 and 9) or a period, update the display.
         if input.isValidDigit {
-            
             if isLastCharacterOperator {
-                
                 display = input
                 isLastCharacterOperator = false
             }
@@ -97,7 +95,7 @@ open class Calculator {
         }
             // if the inputted character is "C" and there is something displayed, clear it. Clear the saved operator, otherwise.
         else if input.isClear {
-            if !(display.characters.isEmpty) {
+            if !(display.isEmpty) {
                 display.removeAll()
             }
             else {
@@ -107,7 +105,7 @@ open class Calculator {
             // If the inputted character is "D" and there is something displayed, remove its last character.
         else if input.isDelete {
             if !display.isEmpty {
-                display = String(display.characters.dropLast())
+                display = String(display.dropLast())
             }
             isLastCharacterOperator = false
         }

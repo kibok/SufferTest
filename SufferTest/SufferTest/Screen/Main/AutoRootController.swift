@@ -13,7 +13,7 @@ class AutoRootController: UIViewController{
     @IBOutlet weak var containerView: UIView!
     
     private var loginViewController: LoginViewController?
-    private var topViewController: UINavigationController?
+    private var topViewController: TopViewController?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -68,9 +68,8 @@ extension AutoRootController: LoginViewControllerDelegate, TopViewControllerDele
     
     func didFinishLogin() {
         let vc = self.storyboard?.instantiateViewController(withIdentifier: "Top") as! TopViewController
-        let nvc = UINavigationController(rootViewController: vc)
         vc.delegate = self
-        self.topViewController = nvc
+        self.topViewController = vc
         self.cycleFromViewController(oldViewController: self.loginViewController!, toViewController: self.topViewController!)
     }
     
