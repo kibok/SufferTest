@@ -45,6 +45,16 @@ class LoginViewController: UIViewController, AuthErrorHandling, FirestoreErrorHa
         self.delegate?.didFinishLogin()
     }
     
+    // MARK: - Navigation
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let vc = segue.destination as? InputFirstSettingViewController {
+            vc.viewModel = InputFirstSettingViewModel(isClosing: false)
+        } else if let vc = segue.destination as? ClosingViewController {
+            vc.viewModel = ClosingViewModel(isClosing: true)
+        }
+    }
+    
     // action
     
     @IBAction func touchUpInsideLoginButton(_ sender: Any) {
@@ -67,7 +77,13 @@ class LoginViewController: UIViewController, AuthErrorHandling, FirestoreErrorHa
                         if DataManager.shared.ongoingProject == nil {
                             self.performSegue(withIdentifier: "toFirstSetting", sender: nil)
                         } else {
-                            self.delegate?.didFinishLogin()
+                            let viewModel = TopViewModel(project: DataManager.shared.ongoingProject!)
+                            if viewModel.isDday {
+                                self.performSegue(withIdentifier: "toClosing", sender: nil)
+                            } else {
+                                self.delegate?.didFinishLogin()
+                            }
+                            
                         }
                     }
                 })
@@ -75,9 +91,9 @@ class LoginViewController: UIViewController, AuthErrorHandling, FirestoreErrorHa
         })
     }
     
-    @IBAction func touchUpInsideSignupButton(_ sender: Any) {
-        let id = self.idTextField.text ?? ""
-        let pass = self.passwordTextField.text ?? ""
+        @IBAction func touchUpInsideSignupButton(_ sender: Any) {
+            let id = self.idTextField.text ?? ""
+            let pass = self.passwordTextField.text ?? ""
         ProgressDialog.shared.show()
         AuthFetcher.signup(email: id, password: pass, completion: { error in
             ProgressDialog.shared.remove()

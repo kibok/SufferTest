@@ -8,10 +8,16 @@
 
 import UIKit
 
+struct InputFirstSettingViewModel {
+    let isClosing: Bool
+}
+
 class InputFirstSettingViewController: UIViewController {
 
     @IBOutlet weak var periodTextField: UITextField!
     @IBOutlet weak var amountTextField: UITextField!
+    
+    var viewModel: InputFirstSettingViewModel!
     
     // MARK: - LifeCycles
     
@@ -44,7 +50,7 @@ class InputFirstSettingViewController: UIViewController {
             let period = self.periodTextField.text?.int,
             let amount = self.amountTextField.text?.int,
             let endDate = Calendar.current.date(byAdding: .day, value: period, to: Date()) {
-            vc.viewModel = ConfirmationFirstSettingViewModel(endDate: endDate, amount: amount)
+            vc.viewModel = ConfirmationFirstSettingViewModel(endDate: endDate, amount: amount, isClosing: self.viewModel.isClosing)
         }
     }
     

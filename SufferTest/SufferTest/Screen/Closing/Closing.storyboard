@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="scX-PX-6ru">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Closing View Controller-->
+        <scene sceneID="Zdj-Yn-IYE">
+            <objects>
+                <viewController id="oal-Gw-JBo" customClass="ClosingViewController" customModule="SufferTest" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="aEn-Em-RfW">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="성공? 실패!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l4r-RP-iza">
+                                <rect key="frame" x="149" y="214" width="76.5" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="300,000 성공!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sLg-2x-Bej">
+                                <rect key="frame" x="135" y="323" width="104" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rcu-px-SRB">
+                                <rect key="frame" x="164" y="487" width="46" height="30"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="touchUpInsideNextButton:" destination="oal-Gw-JBo" eventType="touchUpInside" id="ZR1-Sq-3JC"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Lhi-gV-ZQk" firstAttribute="bottom" secondItem="rcu-px-SRB" secondAttribute="bottom" constant="150" id="765-vu-tdT"/>
+                            <constraint firstItem="l4r-RP-iza" firstAttribute="centerX" secondItem="aEn-Em-RfW" secondAttribute="centerX" id="GRQ-zU-aK3"/>
+                            <constraint firstItem="sLg-2x-Bej" firstAttribute="centerX" secondItem="aEn-Em-RfW" secondAttribute="centerX" id="P8j-Ds-lSr"/>
+                            <constraint firstItem="sLg-2x-Bej" firstAttribute="centerY" secondItem="aEn-Em-RfW" secondAttribute="centerY" id="e0A-d8-EbS"/>
+                            <constraint firstItem="rcu-px-SRB" firstAttribute="centerX" secondItem="aEn-Em-RfW" secondAttribute="centerX" id="rVT-4Y-8yQ"/>
+                            <constraint firstItem="l4r-RP-iza" firstAttribute="top" secondItem="Lhi-gV-ZQk" secondAttribute="top" constant="150" id="xQi-3c-zuk"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Lhi-gV-ZQk"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="UXh-Ii-9Mj"/>
+                    <connections>
+                        <segue destination="8zo-qb-n4b" kind="show" identifier="toInputFirstSetting" id="jjE-Iy-hcG"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ANI-s2-ggc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="351.19999999999999" y="201.94902548725639"/>
+        </scene>
+        <!--InputFirstSettingViewController-->
+        <scene sceneID="WNk-hT-FQl">
+            <objects>
+                <viewControllerPlaceholder storyboardName="FirstSetting" referencedIdentifier="InputFirstSettingViewController" id="8zo-qb-n4b" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Kfc-FF-HMA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1038" y="201"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="H8B-Fi-buI">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MWO-Vm-QWp" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="scX-PX-6ru" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Ty6-z7-H8a">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="oal-Gw-JBo" kind="relationship" relationship="rootViewController" id="fV8-dz-9bl"/>
+                    </connections>
+                </navigationController>
+            </objects>
+            <point key="canvasLocation" x="-527" y="202"/>
+        </scene>
+    </scenes>
+</document>

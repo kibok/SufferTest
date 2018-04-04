@@ -41,7 +41,7 @@ struct Detail {
 /// - details: 상세
 struct Project {
     
-    let projectState: ProjectState
+    var projectState: ProjectState
     let startDate: Date
     let endDate: Date
     let startAmount: Int

@@ -11,6 +11,7 @@ import UIKit
 struct ConfirmationFirstSettingViewModel {
     let endDate: Date
     let amount: Int
+    let isClosing: Bool
 }
 
 class ConfirmationFirstSettingViewController: UIViewController, FirestoreErrorHandling {
@@ -25,9 +26,15 @@ class ConfirmationFirstSettingViewController: UIViewController, FirestoreErrorHa
         
         self.periodLabel.text = viewModel.endDate.string(format: "yyyy/MM/dd")
         self.amountLabel.text = viewModel.amount.currencyFormat
+        
+        print(self.viewModel.isClosing)
     }
     
     @IBAction func touchUpInsideCompleteButton(_ sender: Any) {
+        if self.viewModel.isClosing {
+            // TODO: set success or fail
+            DataManager.closingHistory(state: .success)
+        }
         DataManager.updateongoing(project: Project(state: .ongoing, endDate: viewModel.endDate, startAmout: viewModel.amount))
         HistoryFetcher.startProject(data: ProjectAPI.makeUserHistoryParameters(), completion: { error in
             if let error = error {
@@ -37,5 +44,4 @@ class ConfirmationFirstSettingViewController: UIViewController, FirestoreErrorHa
             }
         })
     }
-
 }

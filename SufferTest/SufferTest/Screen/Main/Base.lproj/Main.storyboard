@@ -76,6 +76,7 @@
                         <outlet property="passwordTextField" destination="loE-BY-v6h" id="rp6-Ib-bdT"/>
                         <segue destination="Kck-UB-YH1" kind="show" identifier="toTop" id="qZ3-1f-exV"/>
                         <segue destination="eUF-Ih-XBN" kind="presentation" identifier="toFirstSetting" id="hmH-Bn-tzA"/>
+                        <segue destination="sA2-i2-J5i" kind="presentation" identifier="toClosing" id="des-Dz-LGl"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rKb-OL-vtF" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -126,7 +127,15 @@
                 <viewControllerPlaceholder storyboardName="FirstSetting" id="eUF-Ih-XBN" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0fe-Mq-ppD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1212.8" y="-31.484257871064472"/>
+            <point key="canvasLocation" x="-1213" y="-144"/>
+        </scene>
+        <!--Closing-->
+        <scene sceneID="CAS-z8-64g">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Closing" id="sA2-i2-J5i" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TgO-6K-vGr" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1234" y="-55"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="JMo-di-NYW">

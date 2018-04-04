@@ -16,7 +16,7 @@
                 <viewControllerPlaceholder storyboardName="History" id="IfO-Eg-Bkm" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hzp-14-Xga" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="575" y="411"/>
+            <point key="canvasLocation" x="586" y="305"/>
         </scene>
         <!--List-->
         <scene sceneID="sOY-du-csM">
@@ -24,7 +24,7 @@
                 <viewControllerPlaceholder storyboardName="List" id="glI-GK-UiE" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Mds-QU-L81" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="558" y="-2"/>
+            <point key="canvasLocation" x="586" y="-103"/>
         </scene>
         <!--Setting-->
         <scene sceneID="A43-nH-aWm">
@@ -32,7 +32,7 @@
                 <viewControllerPlaceholder storyboardName="Setting" id="ezT-dY-dcS" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wFd-o0-CHq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="574" y="256"/>
+            <point key="canvasLocation" x="603" y="191"/>
         </scene>
         <!--Top View Controller-->
         <scene sceneID="4UG-Gr-Dhb">
@@ -121,7 +121,7 @@
                 <viewControllerPlaceholder storyboardName="AddDetail" id="j0d-be-Xrt" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2w9-tu-AiT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="587" y="132"/>
+            <point key="canvasLocation" x="616" y="34"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="jkE-I8-0Dd">

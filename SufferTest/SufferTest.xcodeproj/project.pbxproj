@@ -26,6 +26,8 @@
 		21828755205111CD0034A855 /* TopViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21828754205111CD0034A855 /* TopViewModel.swift */; };
 		218E74B2206B8A030075F49C /* Lisences.txt in Resources */ = {isa = PBXBuildFile; fileRef = 218E74B1206B8A020075F49C /* Lisences.txt */; };
 		219D1DF5206C6DBB00C18886 /* LicenseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 219D1DF4206C6DBB00C18886 /* LicenseViewController.swift */; };
+		21BE00EC20749C470024F444 /* Closing.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 21BE00EB20749C470024F444 /* Closing.storyboard */; };
+		21BE00EE20749C740024F444 /* ClosingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21BE00ED20749C740024F444 /* ClosingViewController.swift */; };
 		21C105672050D078006E81B5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21C105662050D078006E81B5 /* AppDelegate.swift */; };
 		21C1056C2050D078006E81B5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 21C1056A2050D078006E81B5 /* Main.storyboard */; };
 		21C1056E2050D078006E81B5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 21C1056D2050D078006E81B5 /* Assets.xcassets */; };
@@ -82,6 +84,8 @@
 		21828754205111CD0034A855 /* TopViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopViewModel.swift; sourceTree = "<group>"; };
 		218E74B1206B8A020075F49C /* Lisences.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Lisences.txt; sourceTree = "<group>"; };
 		219D1DF4206C6DBB00C18886 /* LicenseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LicenseViewController.swift; sourceTree = "<group>"; };
+		21BE00EB20749C470024F444 /* Closing.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Closing.storyboard; sourceTree = "<group>"; };
+		21BE00ED20749C740024F444 /* ClosingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClosingViewController.swift; sourceTree = "<group>"; };
 		21C105632050D078006E81B5 /* SufferTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SufferTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		21C105662050D078006E81B5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		21C1056B2050D078006E81B5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -203,6 +207,15 @@
 				2182875120510C510034A855 /* TopViewController.swift */,
 			);
 			path = Top;
+			sourceTree = "<group>";
+		};
+		21BE00EA20749B970024F444 /* Closing */ = {
+			isa = PBXGroup;
+			children = (
+				21BE00EB20749C470024F444 /* Closing.storyboard */,
+				21BE00ED20749C740024F444 /* ClosingViewController.swift */,
+			);
+			path = Closing;
 			sourceTree = "<group>";
 		};
 		21C1055A2050D078006E81B5 = {
@@ -333,6 +346,7 @@
 				C4E2CB6D205D434200894CA5 /* FirstSetting */,
 				21828753205111AF0034A855 /* Top */,
 				215A9A17205F64EF00512508 /* AddDetail */,
+				21BE00EA20749B970024F444 /* Closing */,
 				2182874E2050E1A60034A855 /* List */,
 				2120AA702063389F00B9C587 /* History */,
 				C4FEE2B3205AAE970033EC19 /* Setting */,
@@ -464,6 +478,7 @@
 				C4E2CB6F205D436800894CA5 /* FirstSetting.storyboard in Resources */,
 				218E74B2206B8A030075F49C /* Lisences.txt in Resources */,
 				21C1056E2050D078006E81B5 /* Assets.xcassets in Resources */,
+				21BE00EC20749C470024F444 /* Closing.storyboard in Resources */,
 				21C1056C2050D078006E81B5 /* Main.storyboard in Resources */,
 				215A9A19205F653900512508 /* AddDetail.storyboard in Resources */,
 				C46ABC0520542DCA001D86F5 /* History.storyboard in Resources */,
@@ -633,6 +648,7 @@
 				21C105672050D078006E81B5 /* AppDelegate.swift in Sources */,
 				C473ABA9205A8F31004609E4 /* API.swift in Sources */,
 				219D1DF5206C6DBB00C18886 /* LicenseViewController.swift in Sources */,
+				21BE00EE20749C740024F444 /* ClosingViewController.swift in Sources */,
 				2182874B2050E0200034A855 /* ListViewController.swift in Sources */,
 				C4E2CB71205D442B00894CA5 /* InputFirstSettingViewController.swift in Sources */,
 				210256A8206A1AB600B6433E /* SettingViewController.swift in Sources */,

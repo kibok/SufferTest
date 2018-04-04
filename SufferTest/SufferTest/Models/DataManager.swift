@@ -35,6 +35,14 @@ class DataManager {
         shared.projectHistory.append(project)
     }
     
+    static func closingHistory(state: ProjectState = .success) {
+        if var project = shared.ongoingProject {
+            project.projectState = state
+            updateHistory(project: project)
+            shared.ongoingProject = nil
+        }
+    }
+    
     static func clear() {
         shared.ongoingProject = nil
         shared.projectHistory = []
