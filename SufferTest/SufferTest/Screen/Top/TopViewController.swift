@@ -20,6 +20,7 @@ class TopViewController: UIViewController, AuthErrorHandling {
     @IBOutlet var dateLabel: UILabel!
     
     @IBOutlet weak var bannerView: GADBannerView!
+    @IBOutlet weak var backgrounImageView: UIImageView!
     
     var viewModel: TopViewModel!
     var delegate: TopViewControllerDelegate?
@@ -32,12 +33,13 @@ class TopViewController: UIViewController, AuthErrorHandling {
         bannerView.rootViewController = self
         bannerView.load(GADRequest())
         
-        self.updateViews()
-        self.view.backgroundColor = UIColor(patternImage: self.viewModel.resultState.backgroundImage)
         self.addMenuButton()
+        self.updateProject()
+        self.backgrounImageView.image = self.viewModel.resultState.backgroundImage
+        self.navigationController?.navigationBar.setBackgroundImage(self.viewModel.resultState.backgroundImage, for: .default)
     }
     
-    func updateViews() {
+    func updateProject() {
         if let project = DataManager.shared.ongoingProject {
             self.viewModel = TopViewModel(project: project)
         } else {
@@ -46,6 +48,8 @@ class TopViewController: UIViewController, AuthErrorHandling {
         
         if self.viewModel.isDday {
             // 결산 화면 표시하기
+            
+            
         } else {
             self.resultAmountLabel.text = "남은금액 " + self.viewModel.resultAmount.currencyFormat
             self.dateLabel.text = "\(self.viewModel.today) 일째 / \(self.viewModel.period)"
@@ -54,20 +58,19 @@ class TopViewController: UIViewController, AuthErrorHandling {
     
     func setAnimation() {
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
-            UIView.transition(with: self.view, duration: 1, options: .transitionCrossDissolve, animations: {
-                self.view.backgroundColor = UIColor(patternImage: self.viewModel.resultState.backgroundImage)
+            UIView.transition(with: self.view, duration: 0.7, options: .transitionCrossDissolve, animations: {
+                self.backgrounImageView.image = self.viewModel.resultState.backgroundImage
+            })
+            UIView.transition(with: (self.navigationController?.navigationBar)!, duration: 0.7, options: .transitionCrossDissolve, animations: {
+                self.navigationController?.navigationBar.setBackgroundImage(self.viewModel.resultState.backgroundImage, for: .default)
             })
         }
-        
-        UIView.transition(with: (self.navigationController?.navigationBar)!, duration: 1, options: .transitionCrossDissolve, animations: {
-            self.navigationController?.navigationBar.setBackgroundImage(self.viewModel.resultState.backgroundImage, for: .default)
-        })
     }
     
     // MARK: - Unwind segue
 
     @IBAction func backToTop(segue:UIStoryboardSegue) {
-        self.updateViews()
+        self.updateProject()
         self.setAnimation()
     }
     

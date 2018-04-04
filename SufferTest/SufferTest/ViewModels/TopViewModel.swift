@@ -97,8 +97,11 @@ struct TopViewModel {
         self.startAmount = project.startAmount
         self.details = project.details
         self.resultAmount = self.startAmount - self.details.map { $0.amount }.reduce(0, +)
-        self.today = Calendar.current.dateComponents([.day], from: startDate, to: Date()).day! + 1
-        self.period = Calendar.current.dateComponents([.day], from: startDate, to: endDate).day!
+        
+        let start0time = Calendar.current.startOfDay(for: startDate)
+        let end0Time = Calendar.current.startOfDay(for: endDate)
+        self.today = Calendar.current.dateComponents([.day], from: start0time, to: Date()).day! + 1
+        self.period = Calendar.current.dateComponents([.day], from: start0time, to: end0Time).day!
         
         let result: Double = Double(self.resultAmount) / Double(self.startAmount) * 100
         
@@ -106,7 +109,9 @@ struct TopViewModel {
     }
     
     var isDday: Bool {
-        return self.period == self.today
+        return self.period < self.today
     }
     
 }
+
+
