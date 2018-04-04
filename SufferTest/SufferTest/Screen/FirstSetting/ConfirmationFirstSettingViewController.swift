@@ -25,9 +25,7 @@ class ConfirmationFirstSettingViewController: UIViewController, FirestoreErrorHa
         super.viewDidLoad()
         
         self.periodLabel.text = viewModel.endDate.string(format: "yyyy/MM/dd")
-        self.amountLabel.text = viewModel.amount.currencyFormat
-        
-        print(self.viewModel.isClosing)
+        self.amountLabel.text = viewModel.amount.currencyFormat        
     }
     
     @IBAction func touchUpInsideCompleteButton(_ sender: Any) {

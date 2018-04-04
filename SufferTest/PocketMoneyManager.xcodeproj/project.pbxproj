@@ -68,7 +68,7 @@
 		2120AA72206338F300B9C587 /* HistoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryTableViewCell.swift; sourceTree = "<group>"; };
 		2120AA742063392600B9C587 /* HistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryViewController.swift; sourceTree = "<group>"; };
 		2120AA7620633B4500B9C587 /* List.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = List.storyboard; sourceTree = "<group>"; };
-		2120AA7C20633FAE00B9C587 /* SufferTestTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SufferTestTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		2120AA7C20633FAE00B9C587 /* PocketMoneyManagerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PocketMoneyManagerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2120AA7E20633FAE00B9C587 /* SufferTestTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SufferTestTests.swift; sourceTree = "<group>"; };
 		2120AA8020633FAE00B9C587 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2120AA862063403700B9C587 /* APITest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APITest.swift; sourceTree = "<group>"; };
@@ -86,7 +86,7 @@
 		219D1DF4206C6DBB00C18886 /* LicenseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LicenseViewController.swift; sourceTree = "<group>"; };
 		21BE00EB20749C470024F444 /* Closing.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Closing.storyboard; sourceTree = "<group>"; };
 		21BE00ED20749C740024F444 /* ClosingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClosingViewController.swift; sourceTree = "<group>"; };
-		21C105632050D078006E81B5 /* SufferTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SufferTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		21C105632050D078006E81B5 /* PocketMoneyManager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PocketMoneyManager.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		21C105662050D078006E81B5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		21C1056B2050D078006E81B5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		21C1056D2050D078006E81B5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -232,8 +232,8 @@
 		21C105642050D078006E81B5 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				21C105632050D078006E81B5 /* SufferTest.app */,
-				2120AA7C20633FAE00B9C587 /* SufferTestTests.xctest */,
+				21C105632050D078006E81B5 /* PocketMoneyManager.app */,
+				2120AA7C20633FAE00B9C587 /* PocketMoneyManagerTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -377,9 +377,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		2120AA7B20633FAE00B9C587 /* SufferTestTests */ = {
+		2120AA7B20633FAE00B9C587 /* PocketMoneyManagerTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 2120AA8320633FAE00B9C587 /* Build configuration list for PBXNativeTarget "SufferTestTests" */;
+			buildConfigurationList = 2120AA8320633FAE00B9C587 /* Build configuration list for PBXNativeTarget "PocketMoneyManagerTests" */;
 			buildPhases = (
 				E2ECB522239FFA5E509CE73B /* [CP] Check Pods Manifest.lock */,
 				2120AA7820633FAE00B9C587 /* Sources */,
@@ -393,14 +393,14 @@
 			dependencies = (
 				2120AA8220633FAE00B9C587 /* PBXTargetDependency */,
 			);
-			name = SufferTestTests;
+			name = PocketMoneyManagerTests;
 			productName = SufferTestTests;
-			productReference = 2120AA7C20633FAE00B9C587 /* SufferTestTests.xctest */;
+			productReference = 2120AA7C20633FAE00B9C587 /* PocketMoneyManagerTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		21C105622050D078006E81B5 /* SufferTest */ = {
+		21C105622050D078006E81B5 /* PocketMoneyManager */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 21C105752050D078006E81B5 /* Build configuration list for PBXNativeTarget "SufferTest" */;
+			buildConfigurationList = 21C105752050D078006E81B5 /* Build configuration list for PBXNativeTarget "PocketMoneyManager" */;
 			buildPhases = (
 				4701A050D3D0EA2623C35BFF /* [CP] Check Pods Manifest.lock */,
 				21C1055F2050D078006E81B5 /* Sources */,
@@ -413,9 +413,9 @@
 			);
 			dependencies = (
 			);
-			name = SufferTest;
+			name = PocketMoneyManager;
 			productName = SufferTest;
-			productReference = 21C105632050D078006E81B5 /* SufferTest.app */;
+			productReference = 21C105632050D078006E81B5 /* PocketMoneyManager.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -439,7 +439,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 21C1055E2050D078006E81B5 /* Build configuration list for PBXProject "SufferTest" */;
+			buildConfigurationList = 21C1055E2050D078006E81B5 /* Build configuration list for PBXProject "PocketMoneyManager" */;
 			compatibilityVersion = "Xcode 8.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -452,8 +452,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				21C105622050D078006E81B5 /* SufferTest */,
-				2120AA7B20633FAE00B9C587 /* SufferTestTests */,
+				21C105622050D078006E81B5 /* PocketMoneyManager */,
+				2120AA7B20633FAE00B9C587 /* PocketMoneyManagerTests */,
 			);
 		};
 /* End PBXProject section */
@@ -664,7 +664,7 @@
 /* Begin PBXTargetDependency section */
 		2120AA8220633FAE00B9C587 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 21C105622050D078006E81B5 /* SufferTest */;
+			target = 21C105622050D078006E81B5 /* PocketMoneyManager */;
 			targetProxy = 2120AA8120633FAE00B9C587 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -703,7 +703,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SufferTest.app/SufferTest";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PocketMoneyManager.app/PocketMoneyManager";
 			};
 			name = Debug;
 		};
@@ -721,7 +721,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SufferTest.app/SufferTest";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PocketMoneyManager.app/PocketMoneyManager";
 			};
 			name = Release;
 		};
@@ -871,7 +871,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		2120AA8320633FAE00B9C587 /* Build configuration list for PBXNativeTarget "SufferTestTests" */ = {
+		2120AA8320633FAE00B9C587 /* Build configuration list for PBXNativeTarget "PocketMoneyManagerTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				2120AA8420633FAE00B9C587 /* Debug */,
@@ -880,7 +880,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		21C1055E2050D078006E81B5 /* Build configuration list for PBXProject "SufferTest" */ = {
+		21C1055E2050D078006E81B5 /* Build configuration list for PBXProject "PocketMoneyManager" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				21C105732050D078006E81B5 /* Debug */,
@@ -889,7 +889,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		21C105752050D078006E81B5 /* Build configuration list for PBXNativeTarget "SufferTest" */ = {
+		21C105752050D078006E81B5 /* Build configuration list for PBXNativeTarget "PocketMoneyManager" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				21C105762050D078006E81B5 /* Debug */,
