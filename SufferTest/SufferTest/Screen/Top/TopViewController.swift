@@ -44,11 +44,11 @@ class TopViewController: UIViewController, AuthErrorHandling {
             self.viewModel = TopViewModel(project: project)
         } else {
             // 처음부터 시작하기 버튼 표시하기
+            
         }
         
         if self.viewModel.isDday {
             // 결산 화면 표시하기
-            
             
         } else {
             self.resultAmountLabel.text = "남은금액 " + self.viewModel.resultAmount.currencyFormat

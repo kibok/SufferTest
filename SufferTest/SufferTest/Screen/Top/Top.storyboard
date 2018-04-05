@@ -16,7 +16,7 @@
                 <viewControllerPlaceholder storyboardName="History" id="IfO-Eg-Bkm" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hzp-14-Xga" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="586" y="305"/>
+            <point key="canvasLocation" x="748" y="189"/>
         </scene>
         <!--List-->
         <scene sceneID="sOY-du-csM">
@@ -24,7 +24,7 @@
                 <viewControllerPlaceholder storyboardName="List" id="glI-GK-UiE" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Mds-QU-L81" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="586" y="-103"/>
+            <point key="canvasLocation" x="730" y="-87"/>
         </scene>
         <!--Setting-->
         <scene sceneID="A43-nH-aWm">
@@ -32,12 +32,12 @@
                 <viewControllerPlaceholder storyboardName="Setting" id="ezT-dY-dcS" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wFd-o0-CHq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="603" y="191"/>
+            <point key="canvasLocation" x="730" y="327"/>
         </scene>
         <!--Top View Controller-->
         <scene sceneID="4UG-Gr-Dhb">
             <objects>
-                <viewController id="3g2-f9-xwx" customClass="TopViewController" customModule="SufferTest" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="3g2-f9-xwx" customClass="TopViewController" customModule="PocketMoneyManager" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5Zp-La-pZI">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -121,7 +121,7 @@
                 <viewControllerPlaceholder storyboardName="AddDetail" id="j0d-be-Xrt" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2w9-tu-AiT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="616" y="34"/>
+            <point key="canvasLocation" x="718" y="-3"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="jkE-I8-0Dd">

@@ -62,6 +62,7 @@ class LoginViewController: UIViewController, AuthErrorHandling, FirestoreErrorHa
 //        let pass = self.passwordTextField.text ?? ""
         let id = "dearkibok@gmail.com"
         let pass = "0000001"
+
         ProgressDialog.shared.show()
         AuthFetcher.login(email: id, password: pass, completion: { error in
             if let error = error {
@@ -83,7 +84,6 @@ class LoginViewController: UIViewController, AuthErrorHandling, FirestoreErrorHa
                             } else {
                                 self.delegate?.didFinishLogin()
                             }
-                            
                         }
                     }
                 })
