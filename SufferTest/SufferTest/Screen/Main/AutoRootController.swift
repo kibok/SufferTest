@@ -74,6 +74,7 @@ extension AutoRootController: LoginViewControllerDelegate, TopViewControllerDele
     }
     
     func didFinishLogout() {
+        self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
         self.cycleFromViewController(oldViewController: self.topViewController!, toViewController: self.loginViewController!)
     }
     
