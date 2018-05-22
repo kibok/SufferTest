@@ -8,6 +8,7 @@
 
 import Foundation
 import Firebase
+import FirebaseFirestore
 
 typealias JSON = [String: Any]
 
@@ -17,6 +18,8 @@ class FirebaseManager {
     static let shared = FirebaseManager()
     
     var db: Firestore!
+    
+    var reference: DocumentReference?
     
     init() {
         let settings = FirestoreSettings()
@@ -93,14 +96,14 @@ struct HistoryFetcher {
     
     // 프로젝트 시작
     static func startProject(data: JSON, completion:@escaping (_ error: Error?) -> ()) {
-        FirebaseManager.shared.db.collection("users").document((Auth.auth().currentUser?.email)!).setData(data) { error in
+        FirebaseManager.shared.db.collection("users").document((Auth.auth().currentUser?.uid)!).setData(data) { error in
             completion(error)
         }
     }
     
     // 프로젝트 읽어오기
     static func readProject(completion:@escaping (_ error: Error?) -> ()) {
-        FirebaseManager.shared.db.collection("users").document((Auth.auth().currentUser?.email)!).getDocument { (document, error) in
+        FirebaseManager.shared.db.collection("users").document((Auth.auth().currentUser?.uid)!).getDocument { (document, error) in
             if let document = document,let data = document.data() , document.exists {
                 DataManager.updateAll(response: UserHistory(data))
             } else {
@@ -112,7 +115,7 @@ struct HistoryFetcher {
     
     // 오프라인 데이터 읽어오기
     static func readProjectFromSnapshot(completion:@escaping (_ error: Error?) -> ()) {
-        FirebaseManager.shared.db.collection("users").document((Auth.auth().currentUser?.email)!).addSnapshotListener { (document, error) in
+        FirebaseManager.shared.db.collection("users").document((Auth.auth().currentUser?.uid)!).addSnapshotListener { (document, error) in
             if let document = document,let data = document.data() , document.exists {
                 DataManager.updateAll(response: UserHistory(data))
             } else {
@@ -124,16 +127,52 @@ struct HistoryFetcher {
     
     // 업데이트 프로젝트
     static func updateProject(data: JSON, completion:@escaping (_ error: Error?) -> ()) {
-        FirebaseManager.shared.db.collection("users").document((Auth.auth().currentUser?.email)!).updateData([
+        FirebaseManager.shared.db.collection("users").document((Auth.auth().currentUser?.uid)!).updateData([
             "ongoingProject": data
         ]) { error in
             completion(error)
         }
     }
     
+    // 업데이트 이력
+    static func updateDetail(_ newDetail: Detail, completion:@escaping (_ error: Error?) -> ()) {
+        
+        let sfReference = FirebaseManager.shared.db.collection("users").document((Auth.auth().currentUser?.uid)!)
+        
+        FirebaseManager.shared.db.runTransaction({ (transaction, errorPointer) -> Any? in
+            let sfDocument: DocumentSnapshot
+            do {
+                try sfDocument = transaction.getDocument(sfReference)
+            } catch let fetchError as NSError {
+                errorPointer?.pointee = fetchError
+                return nil
+            }
+            guard var oldDetails = sfDocument.data()?["details"] as? [Int] else {
+                return nil
+            }
+            
+            oldDetails.append(0)
+            transaction.updateData(["details": oldDetails], forDocument: sfReference)
+            return oldDetails
+            
+        }) { (object, error) in
+            if let error = error {
+                print("Error updating population: \(error)")
+            } else {
+                print("Population increased to \(object!)")
+            }
+        }
+        
+//        FirebaseManager.shared.db.collection("users").document((Auth.auth().currentUser?.email)!).updateData([
+//            "ongoingProject": data
+//        ]) { error in
+//            completion(error)
+//        }
+    }
+    
     // 프로젝트 삭제
     static func deleteProject(completion:@escaping (_ error: Error?) -> ()) {
-        FirebaseManager.shared.db.collection("users").document((Auth.auth().currentUser?.email)!).updateData([
+        FirebaseManager.shared.db.collection("users").document((Auth.auth().currentUser?.uid)!).updateData([
             "ongoingProject": NSNull()
         ]) { error in
             completion(error)
@@ -142,16 +181,17 @@ struct HistoryFetcher {
     
     // 업데이트 히스토리
     static func updateHistory(data: [JSON], completion:@escaping (_ error: Error?) -> ()) {
-        FirebaseManager.shared.db.collection("users").document((Auth.auth().currentUser?.email)!).updateData([
+        FirebaseManager.shared.db.collection("users").document((Auth.auth().currentUser?.uid)!).updateData([
             "projectHistory": data
         ]) { error in
             completion(error)
         }
+        
     }
     
     // 이력초기화
     static func deleteData(completion:@escaping (_ error: Error?) -> ()) {
-        FirebaseManager.shared.db.collection("users").document((Auth.auth().currentUser?.email)!).delete() { error in
+        FirebaseManager.shared.db.collection("users").document((Auth.auth().currentUser?.uid)!).delete() { error in
             completion(error)
         }
     }

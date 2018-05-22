@@ -44,6 +44,10 @@ class AddDetailViewController: UIViewController, FirestoreErrorHandling {
                 self.performSegue(withIdentifier: "backToTop", sender: nil)
             }
         })
+        
+//        HistoryFetcher.updateDetail(Detail(inputDate: Date(), title: self.titleTextField.text ?? "", amount: self.amountTextField.text?.int ?? 0)) { (error) in
+//            print("you did it!")
+//        }
     }
     
     // Validation Rule

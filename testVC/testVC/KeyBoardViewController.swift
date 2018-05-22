@@ -94,6 +94,7 @@ extension KeyBoardViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Details", for: indexPath)
         cell.textLabel?.text = self.array[indexPath.row]
+        cell.separatorInset.left = 50
         return cell
     }
     
