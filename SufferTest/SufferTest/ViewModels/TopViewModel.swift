@@ -8,6 +8,7 @@
 
 import UIKit
 
+// TODO: Int 削除？
 enum ProjectState: Int {
     
     case ongoing = 0

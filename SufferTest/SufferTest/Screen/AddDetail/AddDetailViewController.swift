@@ -19,14 +19,21 @@ class AddDetailViewController: UIViewController, FirestoreErrorHandling {
     }
     
     @IBAction func touUpInsideInputButton(_ sender: Any) {
-        let alertTilte = "입력실패"
-        if let invalidetitle = self.titleValidationChecker() {
-            self.showAlert(title: alertTilte, message: invalidetitle)
+        
+        func showErrorAlert(error: validateError?) {
+            if let error = error {
+                let alertTilte = "입력실패"
+                self.showAlert(title: alertTilte, message: error.message)
+            }
+        }
+        
+        if let error = self.validateTitle() {
+            showErrorAlert(error: error)
             return
         }
         
-        if let invalidAmount = self.amountValidationChecker() {
-            self.showAlert(title: alertTilte, message: invalidAmount)
+        if let error = self.validateAmount() {
+            showErrorAlert(error: error)
             return
         }
         
@@ -45,34 +52,55 @@ class AddDetailViewController: UIViewController, FirestoreErrorHandling {
             }
         })
         
-//        HistoryFetcher.updateDetail(Detail(inputDate: Date(), title: self.titleTextField.text ?? "", amount: self.amountTextField.text?.int ?? 0)) { (error) in
-//            print("you did it!")
-//        }
+        //        HistoryFetcher.updateDetail(Detail(inputDate: Date(), title: self.titleTextField.text ?? "", amount: self.amountTextField.text?.int ?? 0)) { (error) in
+        //            print("you did it!")
+        //        }
     }
     
-    // Validation Rule
-    // 날짜: 설정가능 날짜는 1~31, 기본값은 그 달의 날짜수
-    // 금액: 0 이상
+}
+
+// AddDetailViewController Validator
+extension AddDetailViewController {
     
-    private func titleValidationChecker() -> String? {
+    enum validateError {
+        case loadFailure
+        case noTitle
+        case noAmount
+        case lackOfAmount
+        
+        var message: String {
+            switch self {
+            case .loadFailure:
+                return "처리 실패"
+            case .noAmount:
+                return "무엇에 썼는지 입력해주세요"
+            case .noTitle:
+                return "금액을 입력해주세요"
+            case .lackOfAmount:
+                return "정확한 금액을 입력해주세요"
+            }
+        }
+    }
+    
+    private func validateTitle() -> validateError? {
         guard let text = self.titleTextField.text else {
-            return "실패"
+            return .loadFailure
         }
         if text == "" {
-            return "무엇에 썼는지 입력해주세요"
+            return .noTitle
         }
         return nil
     }
     
-    private func amountValidationChecker() -> String? {
+    private func validateAmount() -> validateError? {
         guard let text = self.amountTextField.text else {
-            return "실패"
+            return .loadFailure
         }
         if text == "" {
-            return "금액을 입력해주세요"
+            return .noAmount
         }
         if let int = text.int, int <= 0 {
-            return "올바른 금액을 입력해주세요"
+            return .lackOfAmount
         }
         return nil
     }
