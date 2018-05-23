@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="0Q7-kg-oXH">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="0Q7-kg-oXH">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -236,23 +236,42 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="Kri-xK-eGe">
                                 <rect key="frame" x="15" y="65" width="345" height="287"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <inset key="separatorInset" minX="15" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Details" textLabel="Kyx-Aw-MsL" style="IBUITableViewCellStyleDefault" id="Tp9-zs-E9T">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Details" id="Tp9-zs-E9T" customClass="KeyBoardTableViewCell" customModule="testVC" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="55.5" width="345" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Tp9-zs-E9T" id="sh3-TG-gb3">
                                             <rect key="frame" x="0.0" y="0.0" width="345" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Kyx-Aw-MsL">
-                                                    <rect key="frame" x="15" y="0.0" width="315" height="43.5"/>
-                                                    <autoresizingMask key="autoresizingMask"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AIr-vs-4hA">
+                                                    <rect key="frame" x="0.0" y="0.0" width="345" height="19.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NyN-Gf-vUm">
+                                                    <rect key="frame" x="10" y="19.5" width="335" height="17"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstItem="AIr-vs-4hA" firstAttribute="top" secondItem="sh3-TG-gb3" secondAttribute="top" id="0Df-N4-qQa"/>
+                                                <constraint firstItem="NyN-Gf-vUm" firstAttribute="leading" secondItem="sh3-TG-gb3" secondAttribute="leading" constant="10" id="Gbn-QW-kH9"/>
+                                                <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="NyN-Gf-vUm" secondAttribute="bottom" id="HrV-kX-KzX"/>
+                                                <constraint firstItem="AIr-vs-4hA" firstAttribute="leading" secondItem="sh3-TG-gb3" secondAttribute="leading" id="e7Y-zq-JeG"/>
+                                                <constraint firstAttribute="trailing" secondItem="NyN-Gf-vUm" secondAttribute="trailing" id="jWq-I0-wj3"/>
+                                                <constraint firstAttribute="trailing" secondItem="AIr-vs-4hA" secondAttribute="trailing" id="kmq-Fq-efE"/>
+                                                <constraint firstItem="NyN-Gf-vUm" firstAttribute="top" secondItem="AIr-vs-4hA" secondAttribute="bottom" id="vzM-ui-7g9"/>
+                                            </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="detail" destination="NyN-Gf-vUm" id="IV9-2u-zAO"/>
+                                            <outlet property="title" destination="AIr-vs-4hA" id="bSu-8y-xxO"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>

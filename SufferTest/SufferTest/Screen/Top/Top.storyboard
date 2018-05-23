@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="3g2-f9-xwx">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="3g2-f9-xwx">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -16,7 +16,7 @@
                 <viewControllerPlaceholder storyboardName="History" id="IfO-Eg-Bkm" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hzp-14-Xga" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="748" y="189"/>
+            <point key="canvasLocation" x="580" y="177"/>
         </scene>
         <!--List-->
         <scene sceneID="sOY-du-csM">
@@ -24,7 +24,7 @@
                 <viewControllerPlaceholder storyboardName="List" id="glI-GK-UiE" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Mds-QU-L81" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="730" y="-87"/>
+            <point key="canvasLocation" x="562" y="86"/>
         </scene>
         <!--Setting-->
         <scene sceneID="A43-nH-aWm">
@@ -32,7 +32,7 @@
                 <viewControllerPlaceholder storyboardName="Setting" id="ezT-dY-dcS" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wFd-o0-CHq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="730" y="327"/>
+            <point key="canvasLocation" x="579" y="223"/>
         </scene>
         <!--Top View Controller-->
         <scene sceneID="4UG-Gr-Dhb">
@@ -121,7 +121,7 @@
                 <viewControllerPlaceholder storyboardName="AddDetail" id="j0d-be-Xrt" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2w9-tu-AiT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="718" y="-3"/>
+            <point key="canvasLocation" x="592" y="132"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="jkE-I8-0Dd">

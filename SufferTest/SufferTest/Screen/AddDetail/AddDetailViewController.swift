@@ -73,9 +73,9 @@ extension AddDetailViewController {
             case .loadFailure:
                 return "처리 실패"
             case .noAmount:
-                return "무엇에 썼는지 입력해주세요"
-            case .noTitle:
                 return "금액을 입력해주세요"
+            case .noTitle:
+                return "무엇에 썼는지 입력해주세요"
             case .lackOfAmount:
                 return "정확한 금액을 입력해주세요"
             }

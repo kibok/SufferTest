@@ -15,8 +15,10 @@ class KeyBoardViewController: UIViewController {
     @IBOutlet weak var editButton: UIButton!
     
     private var calculator = Calculator()
-
-    var array: [String] = []
+    
+    typealias CellData = (String, String)
+    
+    var cellDataArray: [CellData] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -60,10 +62,10 @@ class KeyBoardViewController: UIViewController {
     
     @IBAction func endInput(_ sender: Any) {
         self.tableView.beginUpdates()
-        self.array.append(self.inputLabel.text!)
+        self.cellDataArray.append(("ブラブラブラ", self.inputLabel.text!))
         self.calculator.clear()
         self.inputLabel.text = "0"
-        self.tableView.insertRows(at: [IndexPath(row: self.array.count - 1, section: 0)], with: .automatic)
+        self.tableView.insertRows(at: [IndexPath(row: self.cellDataArray.count - 1, section: 0)], with: .automatic)
         self.tableView.endUpdates()
     }
     
@@ -84,7 +86,7 @@ class KeyBoardViewController: UIViewController {
 extension KeyBoardViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_: UITableView, numberOfRowsInSection _: Int) -> Int {
-        return self.array.count
+        return self.cellDataArray.count
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -92,15 +94,17 @@ extension KeyBoardViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "Details", for: indexPath)
-        cell.textLabel?.text = self.array[indexPath.row]
-        cell.separatorInset.left = 50
+        let cell = tableView.dequeueReusableCell(withIdentifier: "Details", for: indexPath) as! KeyBoardTableViewCell
+        
+        cell.title.text = self.cellDataArray[indexPath.row].0
+        cell.detail.text = self.cellDataArray[indexPath.row].1
+//        cell.separatorInset.left = 50
         return cell
     }
     
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
-            self.array.remove(at: indexPath.row)
+            self.cellDataArray.remove(at: indexPath.row)
             tableView.deleteRows(at: [indexPath], with: .automatic)
         }
     }
